@@ -1,0 +1,41 @@
+// Add imports here
+#import "platform:/resource/ContextML/model/contextML.ecore"
+#import "platform:/resource/EssentialIFML/model/essentialIFML.ecore"
+
+#schema testTGG
+
+#source {
+	contextML
+}
+
+#target {
+	essentialIFML
+}
+
+#correspondence {
+	ContextToEssentialIFML{
+		#src->Context
+		#trg->EssentialIFMLModel
+	}
+
+	CreateWindowForAll{
+		#src->User
+		#trg->EssentialIFMLModel
+	}
+	
+	CreateAdminWindow{
+		#src->Admin
+		#trg->DetailsText
+	}
+
+	CreateUserWindow{
+		#src->Student
+		#trg->Details
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

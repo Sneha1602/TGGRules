@@ -1,0 +1,25 @@
+#using testTGG.*
+#using AttrCondDefLibrary.*
+
+#rule Context2EssentialIFML #with testTGG
+
+#source {
+	++context:Context
+}
+
+#target {
+	++essentialIFML:EssentialIFMLModel
+}
+
+#correspondence {
+	++ contextToEssentialIFML :ContextToEssentialIFML{
+		#src->context
+		#trg->essentialIFML
+	}
+}
+
+#attributeConditions {
+	eq_string(context.name, essentialIFML.name)
+}
+
+

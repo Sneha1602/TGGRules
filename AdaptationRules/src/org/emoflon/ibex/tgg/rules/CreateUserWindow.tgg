@@ -1,0 +1,101 @@
+#using testTGG.*
+#using AttrCondDefLibrary.*
+
+#rule CreateUserWindow #with testTGG
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -role -> student
+	}
+
+	++student:Student {
+		
+	}
+}
+
+#target {
+	ifml:EssentialIFMLModel {
+		-viewcontainer -> loginWindow
+		-viewcontainer -> nextWindow
+	}
+
+	loginWindow:ViewContainer{
+		name:="loginWindow"
+		-viewcomponent -> loginForm
+	}
+
+	loginForm:Form{
+		-field -> userID
+		-field -> pwd
+		-event -> loginEvent
+	}
+
+	userID:Field
+
+	pwd:Field
+
+	loginEvent:Event{
+		name:="login"
+		-action -> loginAction
+	}
+
+	loginAction:Action{
+		++ -navigates -> nextWindow
+	}
+
+	nextWindow:ViewContainer{
+		name:="nextWindow"
+		-viewcomponent -> userForm
+		-viewcomponent -> displayMessage
+	}
+
+	userForm:Form{
+		-event -> back
+	}
+
+	displayMessage:Details{
+		name:="WelcomeUser"
+		++-text -> UserMessage
+	}
+
+	++UserMessage:DetailsText{
+		text:= "Welcome, You are student"
+	}
+
+	back:Event{
+		name:="logout"
+		-action -> logoutAction
+	}
+
+	logoutAction:Action{
+		++ -navigates -> loginWindow
+	}
+}
+
+#correspondence {
+	contextToEssentialIFML :ContextToEssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	usertoWindows :CreateWindowForAll{
+		#src->e
+		#trg->ifml
+	}
+	
+	++studentToWindow:CreateUserWindow{
+		#src->student
+		#trg->displayMessage
+	}
+	
+}
+
+#attributeConditions {
+	
+}
+
+

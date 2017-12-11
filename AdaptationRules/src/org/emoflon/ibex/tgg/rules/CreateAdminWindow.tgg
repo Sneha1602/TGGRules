@@ -1,0 +1,113 @@
+#using testTGG.*
+#using AttrCondDefLibrary.*
+
+#rule CreateAdminWindow #with testTGG
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -role -> admin
+	}
+
+	++admin:Admin {
+		
+	}
+}
+
+#target {
+	ifml:EssentialIFMLModel {
+		-viewcontainer -> loginWindow
+		-viewcontainer -> nextWindow
+		-viewcontainer -> windowOnlyforAdmin
+	}
+
+	loginWindow:ViewContainer{
+		name:="loginWindow"
+		-viewcomponent -> loginForm
+	}
+
+	loginForm:Form{
+		-field -> userID
+		-field -> pwd
+		-event -> loginEvent
+	}
+
+	userID:Field
+
+	pwd:Field
+
+	loginEvent:Event{
+		name:="login"
+		-action -> loginAction
+	}
+
+	loginAction:Action{
+		++ -navigates -> nextWindow
+	}
+
+	nextWindow:ViewContainer{
+		name:="nextWindow"
+		-viewcomponent -> userForm
+		-viewcomponent -> displayMessage
+	}
+
+	userForm:Form{
+		-event -> back
+		-event -> next
+	}
+
+	displayMessage:Details{
+		name:="WelcomeUser"
+		++-text -> AdminMessage
+	}
+
+	++AdminMessage:DetailsText{
+		text:="Welcome, You are admin"
+	}
+
+	back:Event{
+		name:="logout"
+		-action -> logoutAction
+	}
+
+	next:Event{
+		name:="details"
+		-action -> showDetails
+	}
+
+	logoutAction:Action{
+		++ -navigates -> loginWindow
+	}
+
+	showDetails:Action{
+		++-navigates -> windowOnlyforAdmin
+	}
+
+	windowOnlyforAdmin:ViewContainer
+}
+
+#correspondence {
+	contextToEssentialIFML :ContextToEssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+
+	usertoWindows :CreateWindowForAll{
+		#src->e
+		#trg->ifml
+	}
+
+	++ adminToWindow :CreateAdminWindow{
+		#src->admin
+		#trg->AdminMessage
+	}
+}
+
+#attributeConditions {
+	
+}
+
+
