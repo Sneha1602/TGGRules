@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<org.emoflon.ibex.tgg.core.language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/" xmlns:org.emoflon.ibex.tgg.core.language.misc.expressions="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/misc/expressions" name="testTGG">
+<org.emoflon.ibex.tgg.core.language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/" xmlns:org.emoflon.ibex.tgg.core.language.misc.expressions="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/misc/expressions" name="AdaptationRules">
   <src href="platform:/resource/ContextML/model/contextML.ecore#/"/>
   <trg href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/"/>
   <corr href="platform:/resource/AdaptationRules/model/AdaptationRules.ecore#/"/>
@@ -312,7 +312,7 @@
     </edges>
     <attributeConditionLibrary/>
   </rules>
-  <rules name="CreateWindowsforAllUsers">
+  <rules name="CreateWindowforAllUsers">
     <nodes name="context" outgoingEdges="//@rules.3/@edges.0" incomingCorrsSource="//@rules.3/@nodes.14">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
     </nodes>

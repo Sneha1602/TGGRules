@@ -2,7 +2,7 @@
 #import "platform:/resource/ContextML/model/contextML.ecore"
 #import "platform:/resource/EssentialIFML/model/essentialIFML.ecore"
 
-#schema testTGG
+#schema AdaptationRules
 
 #source {
 	contextML

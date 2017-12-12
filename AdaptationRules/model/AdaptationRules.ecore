@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="testTGG" nsURI="platform:/resource/testTGG/model/testTGG.ecore"
-    nsPrefix="testTGG">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="AdaptationRules" nsURI="platform:/resource/AdaptationRules/model/AdaptationRules.ecore"
+    nsPrefix="AdaptationRules">
   <eClassifiers xsi:type="ecore:EClass" name="ContextToEssentialIFML">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//Context"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>

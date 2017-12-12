@@ -1,7 +1,7 @@
-#using testTGG.*
+#using AdaptationRules.*
 #using AttrCondDefLibrary.*
 
-#rule CreateAdminWindow #with testTGG
+#rule CreateAdminWindow #with AdaptationRules
 
 #source {
 	context:Context{

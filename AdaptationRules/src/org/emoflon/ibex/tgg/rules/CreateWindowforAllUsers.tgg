@@ -1,7 +1,7 @@
-#using testTGG.*
+#using AdaptationRules.*
 #using AttrCondDefLibrary.*
 
-#rule CreateWindowsforAllUsers #with testTGG
+#rule CreateWindowforAllUsers #with AdaptationRules
 
 #source {
 	context:Context{

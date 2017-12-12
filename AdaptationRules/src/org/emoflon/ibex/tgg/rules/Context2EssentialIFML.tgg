@@ -1,7 +1,7 @@
-#using testTGG.*
+#using AdaptationRules.*
 #using AttrCondDefLibrary.*
 
-#rule Context2EssentialIFML #with testTGG
+#rule Context2EssentialIFML #with AdaptationRules
 
 #source {
 	++context:Context

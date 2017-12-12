@@ -8,6 +8,9 @@ import org.apache.commons.lang3.NotImplementedException;
 import org.emoflon.ibex.tgg.operational.strategies.sync.SYNC;
 import org.emoflon.ibex.tgg.runtime.engine.DemoclesEngine;
 
+import contextML.impl.ContextMLPackageImpl;
+import essentialIFML.impl.EssentialIFMLPackageImpl;
+
 public class SYNC_App extends SYNC {
 
 	public SYNC_App(String projectName, String workspacePath, boolean debug) throws IOException {
@@ -32,7 +35,9 @@ public class SYNC_App extends SYNC {
 
 	protected void registerUserMetamodels() throws IOException {
 		// Load and register source and target metamodels
-		throw new NotImplementedException("Please check that your source and target metamodels are loaded and registered.");
+		ContextMLPackageImpl.init();
+		EssentialIFMLPackageImpl.init();
+		//throw new NotImplementedException("Please check that your source and target metamodels are loaded and registered.");
 		
 		// Register correspondence metamodel last
 		loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");

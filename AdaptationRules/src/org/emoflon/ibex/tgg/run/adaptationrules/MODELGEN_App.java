@@ -1,6 +1,8 @@
 package org.emoflon.ibex.tgg.run.adaptationrules;
 
 import java.io.IOException;
+import contextML.impl.ContextMLPackageImpl;
+import essentialIFML.impl.EssentialIFMLPackageImpl;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.commons.lang3.NotImplementedException;
@@ -23,6 +25,8 @@ public class MODELGEN_App extends MODELGEN {
 		
 		MODELGENStopCriterion stop = new MODELGENStopCriterion(generator.getTGG());
 		stop.setTimeOutInMS(1000);
+		stop.setMaxRuleCount("Context2EssentialIFML", 1);
+		stop.setMaxRuleCount("CreateWindowforAllUsers", 1);
 		generator.setStopCriterion(stop);
 		
 		logger.info("Starting MODELGEN");
@@ -36,10 +40,10 @@ public class MODELGEN_App extends MODELGEN {
 	}
 
 	protected void registerUserMetamodels() throws IOException {
-		// Load and register source and target metamodels
-		throw new NotImplementedException("Please check that your source and target metamodels are loaded and registered.");
-		
+		// Load and register source and target metamodels		
 		// Register correspondence metamodel last
+		ContextMLPackageImpl.init();
+		EssentialIFMLPackageImpl.init();
 		loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
 	}
 }
