@@ -40,7 +40,7 @@
         <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;Welcome, You are admin&quot;"/>
       </attrExpr>
     </nodes>
-    <nodes name="back" domainType="TRG" incomingEdges="//@rules.1/@edges.18" outgoingEdges="//@rules.1/@edges.2">
+    <nodes name="back" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.18" outgoingEdges="//@rules.1/@edges.2">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event"/>
       <attrExpr>
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
@@ -80,7 +80,7 @@
     <nodes name="logoutAction" domainType="TRG" incomingEdges="//@rules.1/@edges.2" outgoingEdges="//@rules.1/@edges.13">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action"/>
     </nodes>
-    <nodes name="next" domainType="TRG" incomingEdges="//@rules.1/@edges.19" outgoingEdges="//@rules.1/@edges.14">
+    <nodes name="next" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.19" outgoingEdges="//@rules.1/@edges.14">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event"/>
       <attrExpr>
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
@@ -97,10 +97,10 @@
     <nodes name="pwd" domainType="TRG" incomingEdges="//@rules.1/@edges.10">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Field"/>
     </nodes>
-    <nodes name="showDetails" domainType="TRG" incomingEdges="//@rules.1/@edges.14" outgoingEdges="//@rules.1/@edges.17">
+    <nodes name="showDetails" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.14" outgoingEdges="//@rules.1/@edges.17">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action"/>
     </nodes>
-    <nodes name="userForm" domainType="TRG" incomingEdges="//@rules.1/@edges.15" outgoingEdges="//@rules.1/@edges.18 //@rules.1/@edges.19">
+    <nodes name="userForm" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.15" outgoingEdges="//@rules.1/@edges.18 //@rules.1/@edges.19">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form"/>
     </nodes>
     <nodes name="userID" domainType="TRG" incomingEdges="//@rules.1/@edges.9">
@@ -124,7 +124,7 @@
     <edges name="e__role__admin_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.0">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
     </edges>
-    <edges name="back__action__logoutAction_eMoflonEdge" domainType="TRG" srcNode="//@rules.1/@nodes.4" trgNode="//@rules.1/@nodes.11">
+    <edges name="back__action__logoutAction_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.4" trgNode="//@rules.1/@nodes.11">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event/action"/>
     </edges>
     <edges name="displayMessage__text__AdminMessage_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.3">
@@ -160,10 +160,10 @@
     <edges name="logoutAction__navigates__loginWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.11" trgNode="//@rules.1/@nodes.10">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action/navigates"/>
     </edges>
-    <edges name="next__action__showDetails_eMoflonEdge" domainType="TRG" srcNode="//@rules.1/@nodes.12" trgNode="//@rules.1/@nodes.15">
+    <edges name="next__action__showDetails_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.12" trgNode="//@rules.1/@nodes.15">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event/action"/>
     </edges>
-    <edges name="nextWindow__viewcomponent__userForm_eMoflonEdge" domainType="TRG" srcNode="//@rules.1/@nodes.13" trgNode="//@rules.1/@nodes.16">
+    <edges name="nextWindow__viewcomponent__userForm_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.13" trgNode="//@rules.1/@nodes.16">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
     </edges>
     <edges name="nextWindow__viewcomponent__displayMessage_eMoflonEdge" domainType="TRG" srcNode="//@rules.1/@nodes.13" trgNode="//@rules.1/@nodes.5">
@@ -172,10 +172,10 @@
     <edges name="showDetails__navigates__windowOnlyforAdmin_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.15" trgNode="//@rules.1/@nodes.18">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action/navigates"/>
     </edges>
-    <edges name="userForm__event__back_eMoflonEdge" domainType="TRG" srcNode="//@rules.1/@nodes.16" trgNode="//@rules.1/@nodes.4">
+    <edges name="userForm__event__back_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.16" trgNode="//@rules.1/@nodes.4">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
     </edges>
-    <edges name="userForm__event__next_eMoflonEdge" domainType="TRG" srcNode="//@rules.1/@nodes.16" trgNode="//@rules.1/@nodes.12">
+    <edges name="userForm__event__next_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.16" trgNode="//@rules.1/@nodes.12">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
     </edges>
     <attributeConditionLibrary/>
@@ -197,7 +197,7 @@
         <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;Welcome, You are student&quot;"/>
       </attrExpr>
     </nodes>
-    <nodes name="back" domainType="TRG" incomingEdges="//@rules.2/@edges.15" outgoingEdges="//@rules.2/@edges.2">
+    <nodes name="back" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.15" outgoingEdges="//@rules.2/@edges.2">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event"/>
       <attrExpr>
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
@@ -234,7 +234,7 @@
         <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;loginWindow&quot;"/>
       </attrExpr>
     </nodes>
-    <nodes name="logoutAction" domainType="TRG" incomingEdges="//@rules.2/@edges.2" outgoingEdges="//@rules.2/@edges.12">
+    <nodes name="logoutAction" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.2" outgoingEdges="//@rules.2/@edges.12">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action"/>
     </nodes>
     <nodes name="nextWindow" domainType="TRG" incomingEdges="//@rules.2/@edges.5 //@rules.2/@edges.6" outgoingEdges="//@rules.2/@edges.13 //@rules.2/@edges.14">
@@ -247,7 +247,7 @@
     <nodes name="pwd" domainType="TRG" incomingEdges="//@rules.2/@edges.9">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Field"/>
     </nodes>
-    <nodes name="userForm" domainType="TRG" incomingEdges="//@rules.2/@edges.13" outgoingEdges="//@rules.2/@edges.15">
+    <nodes name="userForm" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.13" outgoingEdges="//@rules.2/@edges.15">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form"/>
     </nodes>
     <nodes name="userID" domainType="TRG" incomingEdges="//@rules.2/@edges.8">
@@ -268,7 +268,7 @@
     <edges name="e__role__student_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.2/@nodes.1" trgNode="//@rules.2/@nodes.2">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
     </edges>
-    <edges name="back__action__logoutAction_eMoflonEdge" domainType="TRG" srcNode="//@rules.2/@nodes.4" trgNode="//@rules.2/@nodes.11">
+    <edges name="back__action__logoutAction_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.4" trgNode="//@rules.2/@nodes.11">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event/action"/>
     </edges>
     <edges name="displayMessage__text__UserMessage_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.5" trgNode="//@rules.2/@nodes.3">
@@ -301,13 +301,13 @@
     <edges name="logoutAction__navigates__loginWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.11" trgNode="//@rules.2/@nodes.10">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action/navigates"/>
     </edges>
-    <edges name="nextWindow__viewcomponent__userForm_eMoflonEdge" domainType="TRG" srcNode="//@rules.2/@nodes.12" trgNode="//@rules.2/@nodes.14">
+    <edges name="nextWindow__viewcomponent__userForm_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.12" trgNode="//@rules.2/@nodes.14">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
     </edges>
     <edges name="nextWindow__viewcomponent__displayMessage_eMoflonEdge" domainType="TRG" srcNode="//@rules.2/@nodes.12" trgNode="//@rules.2/@nodes.5">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
     </edges>
-    <edges name="userForm__event__back_eMoflonEdge" domainType="TRG" srcNode="//@rules.2/@nodes.14" trgNode="//@rules.2/@nodes.4">
+    <edges name="userForm__event__back_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.14" trgNode="//@rules.2/@nodes.4">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
     </edges>
     <attributeConditionLibrary/>

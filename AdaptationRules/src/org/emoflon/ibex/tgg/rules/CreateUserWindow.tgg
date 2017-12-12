@@ -49,12 +49,12 @@
 
 	nextWindow:ViewContainer{
 		name:="nextWindow"
-		-viewcomponent -> userForm
+		++ -viewcomponent -> userForm
 		-viewcomponent -> displayMessage
 	}
 
-	userForm:Form{
-		-event -> back
+	++userForm:Form{
+		++-event -> back
 	}
 
 	displayMessage:Details{
@@ -66,12 +66,12 @@
 		text:= "Welcome, You are student"
 	}
 
-	back:Event{
+	++back:Event{
 		name:="logout"
-		-action -> logoutAction
+		++-action -> logoutAction
 	}
 
-	logoutAction:Action{
+	++logoutAction:Action{
 		++ -navigates -> loginWindow
 	}
 }

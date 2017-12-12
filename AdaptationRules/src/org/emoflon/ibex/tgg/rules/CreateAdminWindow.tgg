@@ -50,13 +50,13 @@
 
 	nextWindow:ViewContainer{
 		name:="nextWindow"
-		-viewcomponent -> userForm
+		++-viewcomponent -> userForm
 		-viewcomponent -> displayMessage
 	}
 
-	userForm:Form{
-		-event -> back
-		-event -> next
+	++userForm:Form{
+		++-event -> back
+		++-event -> next
 	}
 
 	displayMessage:Details{
@@ -68,21 +68,21 @@
 		text:="Welcome, You are admin"
 	}
 
-	back:Event{
+	++back:Event{
 		name:="logout"
-		-action -> logoutAction
+		++-action -> logoutAction
 	}
 
-	next:Event{
+	++next:Event{
 		name:="details"
-		-action -> showDetails
+		++-action -> showDetails
 	}
 
 	logoutAction:Action{
 		++ -navigates -> loginWindow
 	}
 
-	showDetails:Action{
+	++showDetails:Action{
 		++-navigates -> windowOnlyforAdmin
 	}
 

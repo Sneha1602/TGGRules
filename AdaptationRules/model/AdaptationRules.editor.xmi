@@ -161,6 +161,7 @@
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;nextWindow&quot;"/>
       </attributeAssignments>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.8">
+        <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
       </linkVariablePatterns>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.9">
@@ -168,11 +169,14 @@
       </linkVariablePatterns>
     </targetPatterns>
     <targetPatterns name="userForm">
+      <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form"/>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.11">
+        <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
       </linkVariablePatterns>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.12">
+        <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
       </linkVariablePatterns>
     </targetPatterns>
@@ -196,22 +200,26 @@
       </attributeAssignments>
     </targetPatterns>
     <targetPatterns name="back">
+      <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event"/>
       <attributeAssignments op=":=">
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;logout&quot;"/>
       </attributeAssignments>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.13">
+        <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event/action"/>
       </linkVariablePatterns>
     </targetPatterns>
     <targetPatterns name="next">
+      <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event"/>
       <attributeAssignments op=":=">
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;details&quot;"/>
       </attributeAssignments>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.14">
+        <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event/action"/>
       </linkVariablePatterns>
     </targetPatterns>
@@ -223,6 +231,7 @@
       </linkVariablePatterns>
     </targetPatterns>
     <targetPatterns name="showDetails">
+      <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action"/>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.15">
         <op value="++"/>
@@ -317,6 +326,7 @@
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;nextWindow&quot;"/>
       </attributeAssignments>
       <linkVariablePatterns target="//@rules.2/@targetPatterns.8">
+        <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
       </linkVariablePatterns>
       <linkVariablePatterns target="//@rules.2/@targetPatterns.9">
@@ -324,8 +334,10 @@
       </linkVariablePatterns>
     </targetPatterns>
     <targetPatterns name="userForm">
+      <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form"/>
       <linkVariablePatterns target="//@rules.2/@targetPatterns.11">
+        <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
       </linkVariablePatterns>
     </targetPatterns>
@@ -349,16 +361,19 @@
       </attributeAssignments>
     </targetPatterns>
     <targetPatterns name="back">
+      <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event"/>
       <attributeAssignments op=":=">
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;logout&quot;"/>
       </attributeAssignments>
       <linkVariablePatterns target="//@rules.2/@targetPatterns.12">
+        <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Event/action"/>
       </linkVariablePatterns>
     </targetPatterns>
     <targetPatterns name="logoutAction">
+      <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action"/>
       <linkVariablePatterns target="//@rules.2/@targetPatterns.1">
         <op value="++"/>
