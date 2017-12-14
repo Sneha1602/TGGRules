@@ -3,23 +3,23 @@
 
 #rule Context2EssentialIFML #with AdaptationRules
 
-#source {
+#source { 
 	++context:Context
 }
 
 #target {
-	++essentialIFML:EssentialIFMLModel
+	++essentialIFML: EssentialIFMLModel
 }
 
 #correspondence {
-	++ contextToEssentialIFML :ContextToEssentialIFML{
+	++context2EssentialIFML :Context2EssentialIFML{
 		#src->context
 		#trg->essentialIFML
 	}
+	
 }
 
 #attributeConditions {
-	eq_string(context.name, essentialIFML.name)
+	
 }
-
 

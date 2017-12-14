@@ -21,12 +21,12 @@ public class MODELGEN_App extends MODELGEN {
 	public static void main(String[] args) throws IOException {
 		BasicConfigurator.configure();
 
-		MODELGEN_App generator = new MODELGEN_App("AdaptationRules", "./../", false);
+		MODELGEN_App generator = new MODELGEN_App("AdaptationRules", "./../", true);
 		
 		MODELGENStopCriterion stop = new MODELGENStopCriterion(generator.getTGG());
 		stop.setTimeOutInMS(1000);
 		stop.setMaxRuleCount("Context2EssentialIFML", 1);
-		stop.setMaxRuleCount("CreateWindowforAllUsers", 1);
+		stop.setMaxRuleCount("CreateWindowsAndLinks", 1);
 		generator.setStopCriterion(stop);
 		
 		logger.info("Starting MODELGEN");

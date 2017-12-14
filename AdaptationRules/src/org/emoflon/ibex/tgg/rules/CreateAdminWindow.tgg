@@ -1,7 +1,7 @@
 #using AdaptationRules.*
 #using AttrCondDefLibrary.*
 
-#rule CreateAdminWindow #with AdaptationRules
+#rule CreateAdminWindow #extends CreateWindowAbstract #with AdaptationRules
 
 #source {
 	context:Context{
@@ -9,68 +9,21 @@
 	}
 
 	e:User {
-		++ -role -> admin
+		++ -role -> roleName
 	}
 
-	++admin:Admin {
+	++roleName:Admin {
 		
 	}
 }
 
 #target {
 	ifml:EssentialIFMLModel {
-		-viewcontainer -> loginWindow
-		-viewcontainer -> nextWindow
-		-viewcontainer -> windowOnlyforAdmin
-	}
-
-	loginWindow:ViewContainer{
-		name:="loginWindow"
-		-viewcomponent -> loginForm
-	}
-
-	loginForm:Form{
-		-field -> userID
-		-field -> pwd
-		-event -> loginEvent
-	}
-
-	userID:Field
-
-	pwd:Field
-
-	loginEvent:Event{
-		name:="login"
-		-action -> loginAction
-	}
-
-	loginAction:Action{
-		++ -navigates -> nextWindow
-	}
-
-	nextWindow:ViewContainer{
-		name:="nextWindow"
-		++-viewcomponent -> userForm
-		-viewcomponent -> displayMessage
+		++ -viewcontainer -> windowOnlyforAdmin
 	}
 
 	++userForm:Form{
-		++-event -> back
-		++-event -> next
-	}
-
-	displayMessage:Details{
-		name:="WelcomeUser"
-		++-text -> AdminMessage
-	}
-
-	++AdminMessage:DetailsText{
-		text:="Welcome, You are admin"
-	}
-
-	++back:Event{
-		name:="logout"
-		++-action -> logoutAction
+		++ -event -> next
 	}
 
 	++next:Event{
@@ -78,32 +31,38 @@
 		++-action -> showDetails
 	}
 
-	logoutAction:Action{
-		++ -navigates -> loginWindow
-	}
-
 	++showDetails:Action{
 		++-navigates -> windowOnlyforAdmin
 	}
 
-	windowOnlyforAdmin:ViewContainer
+	++Message:DetailsText{
+		text:="Welcome, You are admin"
+	}
+
+	windowOnlyforAdmin:ViewContainer{
+		++ - viewcomponent-> backForm
+		
+	}
+	
+	++backForm: Form{
+		++- event -> backToNextWindowEvent
+	}
+	++backToNextWindowEvent:Event{
+		name :="backToAdminWindow"
+		++-action -> backToNextWindow
+	}
+
+
+	++backToNextWindow:Action{
+		++ -navigates -> nextWindow
+	}
+	
+	nextWindow: ViewContainer
+	
 }
 
 #correspondence {
-	contextToEssentialIFML :ContextToEssentialIFML{
-		#src->context
-		#trg->ifml
-	}
 
-	usertoWindows :CreateWindowForAll{
-		#src->e
-		#trg->ifml
-	}
-
-	++ adminToWindow :CreateAdminWindow{
-		#src->admin
-		#trg->AdminMessage
-	}
 }
 
 #attributeConditions {
