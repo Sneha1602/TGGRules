@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.emoflon.ibex.tgg.core.runtime="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore">
+  <org.emoflon.ibex.tgg.core.runtime:TGGRuleApplication name="Context2EssentialIFML" final="true">
+    <createdSrc href="src.xmi#/"/>
+    <createdTrg href="trg.xmi#/0"/>
+    <createdCorr href="corr.xmi#/0"/>
+    <nodeMappings key="context2EssentialIFML">
+      <value href="corr.xmi#/0"/>
+    </nodeMappings>
+    <nodeMappings key="essentialIFML">
+      <value href="trg.xmi#/0"/>
+    </nodeMappings>
+    <nodeMappings key="context">
+      <value href="src.xmi#/"/>
+    </nodeMappings>
+  </org.emoflon.ibex.tgg.core.runtime:TGGRuleApplication>
+  <org.emoflon.ibex.tgg.core.runtime:TGGRuleApplication name="CreateWindowsAndLinks" final="true">
+    <createdSrc href="src.xmi#//@entity.0"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.2/@viewcomponent.0/@text"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.2/@viewcomponent.0"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.1/@viewcomponent.0"/>
+    <createdTrg href="trg.xmi#/1"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.0/@viewcomponent.0/@event.0"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.0/@viewcomponent.0"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.0"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.1"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.0/@viewcomponent.0/@field.1"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.0/@viewcomponent.0/@field.0"/>
+    <createdTrg href="trg.xmi#/0/@viewcontainer.2"/>
+    <createdCorr href="corr.xmi#/1"/>
+    <contextSrc href="src.xmi#/"/>
+    <contextTrg href="trg.xmi#/0"/>
+    <nodeMappings key="userToLogin">
+      <value href="corr.xmi#/1"/>
+    </nodeMappings>
+    <nodeMappings key="displayDetails">
+      <value href="trg.xmi#/0/@viewcontainer.2/@viewcomponent.0"/>
+    </nodeMappings>
+    <nodeMappings key="loginAction">
+      <value href="trg.xmi#/1"/>
+    </nodeMappings>
+    <nodeMappings key="AdminDetails">
+      <value href="trg.xmi#/0/@viewcontainer.2/@viewcomponent.0/@text"/>
+    </nodeMappings>
+    <nodeMappings key="loginWindow">
+      <value href="trg.xmi#/0/@viewcontainer.0"/>
+    </nodeMappings>
+    <nodeMappings key="userID">
+      <value href="trg.xmi#/0/@viewcontainer.0/@viewcomponent.0/@field.0"/>
+    </nodeMappings>
+    <nodeMappings key="windowOnlyforAdmin">
+      <value href="trg.xmi#/0/@viewcontainer.2"/>
+    </nodeMappings>
+    <nodeMappings key="displayMessage">
+      <value href="trg.xmi#/0/@viewcontainer.1/@viewcomponent.0"/>
+    </nodeMappings>
+    <nodeMappings key="loginForm">
+      <value href="trg.xmi#/0/@viewcontainer.0/@viewcomponent.0"/>
+    </nodeMappings>
+    <nodeMappings key="u">
+      <value href="src.xmi#//@entity.0"/>
+    </nodeMappings>
+    <nodeMappings key="loginEvent">
+      <value href="trg.xmi#/0/@viewcontainer.0/@viewcomponent.0/@event.0"/>
+    </nodeMappings>
+    <nodeMappings key="nextWindow">
+      <value href="trg.xmi#/0/@viewcontainer.1"/>
+    </nodeMappings>
+    <nodeMappings key="pwd">
+      <value href="trg.xmi#/0/@viewcontainer.0/@viewcomponent.0/@field.1"/>
+    </nodeMappings>
+    <nodeMappings key="context">
+      <value href="src.xmi#/"/>
+    </nodeMappings>
+    <nodeMappings key="ifml">
+      <value href="trg.xmi#/0"/>
+    </nodeMappings>
+    <nodeMappings key="contextToEssentialIFML">
+      <value href="corr.xmi#/0"/>
+    </nodeMappings>
+  </org.emoflon.ibex.tgg.core.runtime:TGGRuleApplication>
+</xmi:XMI>

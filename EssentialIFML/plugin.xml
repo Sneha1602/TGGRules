@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated essentialIFML -->
       <package
-            uri="http://www.example.org/essentialIFML"
+            uri="platform:/resource/EssentialIFML/model/essentialIFML.ecore"
             class="essentialIFML.EssentialIFMLPackage"
             genModel="model/essentialIFML.genmodel"/>
    </extension>

@@ -2,6 +2,7 @@
  */
 package essentialIFML.impl;
 
+import essentialIFML.Annotation;
 import essentialIFML.EssentialIFMLPackage;
 import essentialIFML.ViewComponent;
 import essentialIFML.ViewContainer;
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link essentialIFML.impl.ViewContainerImpl#isIsDefault <em>Is Default</em>}</li>
  *   <li>{@link essentialIFML.impl.ViewContainerImpl#isIsLandmark <em>Is Landmark</em>}</li>
  *   <li>{@link essentialIFML.impl.ViewContainerImpl#getViewcomponent <em>Viewcomponent</em>}</li>
+ *   <li>{@link essentialIFML.impl.ViewContainerImpl#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +88,16 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 	 * @ordered
 	 */
 	protected EList<ViewComponent> viewcomponent;
+
+	/**
+	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnnotation()
+	 * @generated
+	 * @ordered
+	 */
+	protected Annotation annotation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,6 +177,44 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Annotation getAnnotation() {
+		if (annotation != null && annotation.eIsProxy()) {
+			InternalEObject oldAnnotation = (InternalEObject)annotation;
+			annotation = (Annotation)eResolveProxy(oldAnnotation);
+			if (annotation != oldAnnotation) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION, oldAnnotation, annotation));
+			}
+		}
+		return annotation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Annotation basicGetAnnotation() {
+		return annotation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAnnotation(Annotation newAnnotation) {
+		Annotation oldAnnotation = annotation;
+		annotation = newAnnotation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION, oldAnnotation, annotation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -188,6 +238,9 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 				return isIsLandmark();
 			case EssentialIFMLPackage.VIEW_CONTAINER__VIEWCOMPONENT:
 				return getViewcomponent();
+			case EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION:
+				if (resolve) return getAnnotation();
+				return basicGetAnnotation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,6 +264,9 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 				getViewcomponent().clear();
 				getViewcomponent().addAll((Collection<? extends ViewComponent>)newValue);
 				return;
+			case EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION:
+				setAnnotation((Annotation)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -232,6 +288,9 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 			case EssentialIFMLPackage.VIEW_CONTAINER__VIEWCOMPONENT:
 				getViewcomponent().clear();
 				return;
+			case EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION:
+				setAnnotation((Annotation)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -250,6 +309,8 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 				return isLandmark != IS_LANDMARK_EDEFAULT;
 			case EssentialIFMLPackage.VIEW_CONTAINER__VIEWCOMPONENT:
 				return viewcomponent != null && !viewcomponent.isEmpty();
+			case EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION:
+				return annotation != null;
 		}
 		return super.eIsSet(featureID);
 	}

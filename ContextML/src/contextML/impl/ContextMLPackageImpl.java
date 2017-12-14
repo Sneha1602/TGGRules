@@ -192,6 +192,15 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getContext_Name() {
+		return (EAttribute)contextEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntity() {
 		return entityEClass;
 	}
@@ -335,6 +344,7 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 		contextEClass = createEClass(CONTEXT);
 		createEReference(contextEClass, CONTEXT__ENTITY);
 		createEReference(contextEClass, CONTEXT__PROVIDER);
+		createEAttribute(contextEClass, CONTEXT__NAME);
 
 		entityEClass = createEClass(ENTITY);
 
@@ -398,6 +408,7 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContext_Entity(), this.getEntity(), null, "entity", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_Provider(), this.getProvider(), null, "provider", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContext_Name(), ecorePackage.getEString(), "name", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

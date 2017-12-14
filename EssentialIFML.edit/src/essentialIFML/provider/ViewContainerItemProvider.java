@@ -50,6 +50,7 @@ public class ViewContainerItemProvider extends NamedElementItemProvider {
 
 			addIsDefaultPropertyDescriptor(object);
 			addIsLandmarkPropertyDescriptor(object);
+			addAnnotationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,6 +95,28 @@ public class ViewContainerItemProvider extends NamedElementItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Annotation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAnnotationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ViewContainer_annotation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ViewContainer_annotation_feature", "_UI_ViewContainer_type"),
+				 EssentialIFMLPackage.Literals.VIEW_CONTAINER__ANNOTATION,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

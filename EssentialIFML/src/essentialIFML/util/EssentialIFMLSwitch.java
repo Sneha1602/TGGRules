@@ -94,6 +94,13 @@ public class EssentialIFMLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case EssentialIFMLPackage.DETAILS_TEXT: {
+				DetailsText detailsText = (DetailsText)theEObject;
+				T result = caseDetailsText(detailsText);
+				if (result == null) result = caseNamedElement(detailsText);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case EssentialIFMLPackage.ACTION: {
 				Action action = (Action)theEObject;
 				T result = caseAction(action);
@@ -127,6 +134,12 @@ public class EssentialIFMLSwitch<T> extends Switch<T> {
 				ViewComponent viewComponent = (ViewComponent)theEObject;
 				T result = caseViewComponent(viewComponent);
 				if (result == null) result = caseNamedElement(viewComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EssentialIFMLPackage.ANNOTATION: {
+				Annotation annotation = (Annotation)theEObject;
+				T result = caseAnnotation(annotation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -191,6 +204,21 @@ public class EssentialIFMLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseField(Field object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Details Text</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Details Text</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDetailsText(DetailsText object) {
 		return null;
 	}
 
@@ -266,6 +294,21 @@ public class EssentialIFMLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseViewComponent(ViewComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Annotation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Annotation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnnotation(Annotation object) {
 		return null;
 	}
 

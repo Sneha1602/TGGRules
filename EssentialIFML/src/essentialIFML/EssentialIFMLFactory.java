@@ -58,6 +58,15 @@ public interface EssentialIFMLFactory extends EFactory {
 	Field createField();
 
 	/**
+	 * Returns a new object of class '<em>Details Text</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Details Text</em>'.
+	 * @generated
+	 */
+	DetailsText createDetailsText();
+
+	/**
 	 * Returns a new object of class '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +101,15 @@ public interface EssentialIFMLFactory extends EFactory {
 	 * @generated
 	 */
 	Details createDetails();
+
+	/**
+	 * Returns a new object of class '<em>Annotation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Annotation</em>'.
+	 * @generated
+	 */
+	Annotation createAnnotation();
 
 	/**
 	 * Returns the package supported by this factory.

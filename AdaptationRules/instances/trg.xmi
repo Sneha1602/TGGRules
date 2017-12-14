@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:essentialIFML="platform:/resource/EssentialIFML/model/essentialIFML.ecore">
+  <essentialIFML:EssentialIFMLModel>
+    <viewcontainer name="loginWindow">
+      <viewcomponent xsi:type="essentialIFML:Form">
+        <field/>
+        <field/>
+        <event name="login" action="/1"/>
+      </viewcomponent>
+    </viewcontainer>
+    <viewcontainer name="nextWindow">
+      <viewcomponent xsi:type="essentialIFML:Details"/>
+    </viewcontainer>
+    <viewcontainer name="detailsWindow">
+      <viewcomponent xsi:type="essentialIFML:Details" name="details">
+        <text text="Show Admin details"/>
+      </viewcomponent>
+    </viewcontainer>
+  </essentialIFML:EssentialIFMLModel>
+  <essentialIFML:Action/>
+</xmi:XMI>

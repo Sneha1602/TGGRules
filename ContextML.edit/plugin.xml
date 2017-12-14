@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated contextML -->
       <factory
-            uri="http://www.example.org/contextML"
+            uri="platform:/resource/ContextML/model/contextML.ecore"
             class="contextML.provider.ContextMLItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

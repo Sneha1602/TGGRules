@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emf="http://gervarro.org/democles/constraint/emf.ecore" xmlns:relational="http://gervarro.org/democles/specification/constraint/relational.ecore" xmlns:specification="http://gervarro.org/democles/specification.ecore">
+  <specification:Pattern name="CreateAdminWindow__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/0/@symbolicParameters.0"/>
+        <parameters reference="/0/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//Context/entity"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateAdminWindow__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="windowOnlyforAdmin">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="nextWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <parameters reference="/1/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateAdminWindow__GEN">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="displayMessage">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="nextWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="pwd">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userID">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="windowOnlyforAdmin">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userToLogin">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="loginWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="displayMessage_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginEvent_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000B6C6F67696E57696E646F77"/>
+      <constants value="ACED000574000B57656C636F6D6555736572"/>
+      <constants value="ACED00057400056C6F67696E"/>
+      <constants value="ACED000574000A6E65787457696E646F77"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/2/@symbolicParameters.7"/>
+        <parameters reference="/2/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/2/@symbolicParameters.2"/>
+        <parameters reference="/2/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <parameters reference="/2/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/2/@symbolicParameters.8"/>
+        <parameters reference="/2/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/2/@bodies.0/@localVariables.0"/>
+        <parameters reference="/2/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/2/@bodies.0/@localVariables.1"/>
+        <parameters reference="/2/@bodies.0/@constants.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/2/@bodies.0/@localVariables.2"/>
+        <parameters reference="/2/@bodies.0/@constants.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/2/@bodies.0/@localVariables.3"/>
+        <parameters reference="/2/@bodies.0/@constants.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateAdminWindow__GEN_REFINEMENT_INVOCATIONS">
+        <parameters reference="/2/@symbolicParameters.0"/>
+        <parameters reference="/2/@symbolicParameters.1"/>
+        <parameters reference="/2/@symbolicParameters.2"/>
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <parameters reference="/2/@symbolicParameters.6"/>
+        <parameters reference="/2/@symbolicParameters.7"/>
+        <parameters reference="/2/@symbolicParameters.8"/>
+        <parameters reference="/2/@symbolicParameters.9"/>
+        <parameters reference="/2/@symbolicParameters.10"/>
+        <parameters reference="/2/@symbolicParameters.11"/>
+        <parameters reference="/2/@symbolicParameters.12"/>
+        <parameters reference="/2/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateAdminWindow_e_roleEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/2/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateAdminWindow_displayMessage_textEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/2/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateAdminWindow_loginAction_navigatesEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/2/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateAdminWindow_viewcontainerEdge_windowOnlyforAdmin_Containment__CONSTRAINT">
+        <parameters reference="/2/@symbolicParameters.11"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateAdminWindow__GEN_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="displayMessage">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="nextWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="pwd">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userID">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="windowOnlyforAdmin">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userToLogin">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="displayMessage_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginEvent_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000B57656C636F6D6555736572"/>
+      <constants value="ACED000574000A6E65787457696E646F77"/>
+      <constants value="ACED00057400056C6F67696E"/>
+      <constants value="ACED000574000B6C6F67696E57696E646F77"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/3/@symbolicParameters.2"/>
+        <parameters reference="/3/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/3/@symbolicParameters.8"/>
+        <parameters reference="/3/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/3/@symbolicParameters.5"/>
+        <parameters reference="/3/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/3/@symbolicParameters.7"/>
+        <parameters reference="/3/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/3/@bodies.0/@localVariables.0"/>
+        <parameters reference="/3/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/3/@bodies.0/@localVariables.1"/>
+        <parameters reference="/3/@bodies.0/@constants.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/3/@bodies.0/@localVariables.2"/>
+        <parameters reference="/3/@bodies.0/@constants.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/3/@bodies.0/@localVariables.3"/>
+        <parameters reference="/3/@bodies.0/@constants.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateAdminWindow__CONTEXT_SRC">
+        <parameters reference="/3/@symbolicParameters.0"/>
+        <parameters reference="/3/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateAdminWindow__CONTEXT_TRG">
+        <parameters reference="/3/@symbolicParameters.3"/>
+        <parameters reference="/3/@symbolicParameters.11"/>
+        <parameters reference="/3/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowAbstract__GEN_REFINEMENT_INVOCATIONS">
+        <parameters reference="/3/@symbolicParameters.0"/>
+        <parameters reference="/3/@symbolicParameters.1"/>
+        <parameters reference="/3/@symbolicParameters.2"/>
+        <parameters reference="/3/@symbolicParameters.3"/>
+        <parameters reference="/3/@symbolicParameters.4"/>
+        <parameters reference="/3/@symbolicParameters.5"/>
+        <parameters reference="/3/@symbolicParameters.6"/>
+        <parameters reference="/3/@symbolicParameters.7"/>
+        <parameters reference="/3/@symbolicParameters.8"/>
+        <parameters reference="/3/@symbolicParameters.9"/>
+        <parameters reference="/3/@symbolicParameters.10"/>
+        <parameters reference="/3/@symbolicParameters.12"/>
+        <parameters reference="/3/@symbolicParameters.13"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateAdminWindow_displayMessage_textEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="displayMessage">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="Message1">
+        <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//DetailsText"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="displayMessage_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="Message1_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000B57656C636F6D6555736572"/>
+      <constants value="ACED000574001657656C636F6D652C20596F75206172652061646D696E"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/4/@symbolicParameters.0"/>
+        <parameters reference="/4/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/4/@bodies.0/@localVariables.0"/>
+        <parameters reference="/4/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//DetailsText/text"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/4/@bodies.0/@localVariables.1"/>
+        <parameters reference="/4/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/4/@bodies.0/@localVariables.2"/>
+        <parameters reference="/4/@bodies.0/@constants.1"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.0"/>
+        <parameters reference="/4/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//Details/text"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateAdminWindow_e_roleEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="roleName1">
+        <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Admin"/>
+      </localVariables>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.0"/>
+        <parameters reference="/5/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//User/role"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateAdminWindow_loginAction_navigatesEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow1">
+        <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow1_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000A6E65787457696E646F77"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/6/@bodies.0/@localVariables.0"/>
+        <parameters reference="/6/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/6/@bodies.0/@localVariables.1"/>
+        <parameters reference="/6/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/6/@symbolicParameters.0"/>
+        <parameters reference="/6/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//Action/navigates"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateAdminWindow_viewcontainerEdge_windowOnlyforAdmin_Containment__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="windowOnlyforAdmin">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="ifml">
+        <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+      </localVariables>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@bodies.0/@localVariables.0"/>
+        <parameters reference="/7/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateUserWindow__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.0"/>
+        <parameters reference="/8/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//Context/entity"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateUserWindow__GEN">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="displayMessage">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="nextWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="pwd">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userID">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userToLogin">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="displayMessage_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginEvent_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000B57656C636F6D6555736572"/>
+      <constants value="ACED00057400056C6F67696E"/>
+      <constants value="ACED000574000A6E65787457696E646F77"/>
+      <constants value="ACED000574000B6C6F67696E57696E646F77"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/9/@symbolicParameters.5"/>
+        <parameters reference="/9/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/9/@symbolicParameters.8"/>
+        <parameters reference="/9/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/9/@bodies.0/@localVariables.0"/>
+        <parameters reference="/9/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/9/@bodies.0/@localVariables.1"/>
+        <parameters reference="/9/@bodies.0/@constants.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/9/@bodies.0/@localVariables.2"/>
+        <parameters reference="/9/@bodies.0/@constants.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/9/@bodies.0/@localVariables.3"/>
+        <parameters reference="/9/@bodies.0/@constants.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateUserWindow__GEN_REFINEMENT_INVOCATIONS">
+        <parameters reference="/9/@symbolicParameters.0"/>
+        <parameters reference="/9/@symbolicParameters.1"/>
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.3"/>
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+        <parameters reference="/9/@symbolicParameters.6"/>
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+        <parameters reference="/9/@symbolicParameters.9"/>
+        <parameters reference="/9/@symbolicParameters.10"/>
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateUserWindow_e_roleEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/9/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateUserWindow_displayMessage_textEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/9/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateUserWindow_loginAction_navigatesEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/9/@symbolicParameters.4"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateUserWindow__GEN_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="displayMessage">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="nextWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="pwd">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userID">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userToLogin">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="displayMessage_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginEvent_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000A6E65787457696E646F77"/>
+      <constants value="ACED000574000B6C6F67696E57696E646F77"/>
+      <constants value="ACED000574000B57656C636F6D6555736572"/>
+      <constants value="ACED00057400056C6F67696E"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/10/@symbolicParameters.8"/>
+        <parameters reference="/10/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/10/@symbolicParameters.2"/>
+        <parameters reference="/10/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/10/@bodies.0/@localVariables.0"/>
+        <parameters reference="/10/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/10/@bodies.0/@localVariables.1"/>
+        <parameters reference="/10/@bodies.0/@constants.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/10/@bodies.0/@localVariables.2"/>
+        <parameters reference="/10/@bodies.0/@constants.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/10/@bodies.0/@localVariables.3"/>
+        <parameters reference="/10/@bodies.0/@constants.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateUserWindow__CONTEXT_SRC">
+        <parameters reference="/10/@symbolicParameters.0"/>
+        <parameters reference="/10/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowAbstract__GEN_REFINEMENT_INVOCATIONS">
+        <parameters reference="/10/@symbolicParameters.0"/>
+        <parameters reference="/10/@symbolicParameters.1"/>
+        <parameters reference="/10/@symbolicParameters.2"/>
+        <parameters reference="/10/@symbolicParameters.3"/>
+        <parameters reference="/10/@symbolicParameters.4"/>
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.6"/>
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+        <parameters reference="/10/@symbolicParameters.9"/>
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+        <parameters reference="/10/@symbolicParameters.12"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateUserWindow_displayMessage_textEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="displayMessage">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="Message1">
+        <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//DetailsText"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="Message1_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="displayMessage_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574001857656C636F6D652C20596F75206172652073747564656E74"/>
+      <constants value="ACED000574000B57656C636F6D6555736572"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/11/@bodies.0/@localVariables.0"/>
+        <parameters reference="/11/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//DetailsText/text"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/11/@symbolicParameters.0"/>
+        <parameters reference="/11/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/11/@bodies.0/@localVariables.1"/>
+        <parameters reference="/11/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/11/@bodies.0/@localVariables.2"/>
+        <parameters reference="/11/@bodies.0/@constants.1"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.0"/>
+        <parameters reference="/11/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//Details/text"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateUserWindow_e_roleEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="roleName1">
+        <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Admin"/>
+      </localVariables>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.0"/>
+        <parameters reference="/12/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//User/role"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateUserWindow_loginAction_navigatesEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow1">
+        <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow1_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000A6E65787457696E646F77"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/13/@bodies.0/@localVariables.0"/>
+        <parameters reference="/13/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/13/@bodies.0/@localVariables.1"/>
+        <parameters reference="/13/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/13/@symbolicParameters.0"/>
+        <parameters reference="/13/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//Action/navigates"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowAbstract__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userToLogin">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.4"/>
+        <parameters reference="/14/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/AdaptationRules.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.4"/>
+        <parameters reference="/14/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/AdaptationRules.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.5"/>
+        <parameters reference="/14/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/AdaptationRules.ecore#//CreateWindowsAndLinks/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.5"/>
+        <parameters reference="/14/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/AdaptationRules.ecore#//CreateWindowsAndLinks/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowAbstract__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/15/@symbolicParameters.0"/>
+        <parameters reference="/15/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//Context/entity"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowAbstract__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userID">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="pwd">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="nextWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="displayMessage">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="displayMessage_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginEvent_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000B57656C636F6D6555736572"/>
+      <constants value="ACED000574000B6C6F67696E57696E646F77"/>
+      <constants value="ACED00057400056C6F67696E"/>
+      <constants value="ACED000574000A6E65787457696E646F77"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/16/@symbolicParameters.8"/>
+        <parameters reference="/16/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/16/@symbolicParameters.1"/>
+        <parameters reference="/16/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/16/@symbolicParameters.5"/>
+        <parameters reference="/16/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/16/@symbolicParameters.7"/>
+        <parameters reference="/16/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/16/@bodies.0/@localVariables.0"/>
+        <parameters reference="/16/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/16/@bodies.0/@localVariables.1"/>
+        <parameters reference="/16/@bodies.0/@constants.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/16/@bodies.0/@localVariables.2"/>
+        <parameters reference="/16/@bodies.0/@constants.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/16/@bodies.0/@localVariables.3"/>
+        <parameters reference="/16/@bodies.0/@constants.3"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/16/@symbolicParameters.0"/>
+        <parameters reference="/16/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/16/@symbolicParameters.0"/>
+        <parameters reference="/16/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/16/@symbolicParameters.1"/>
+        <parameters reference="/16/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/16/@symbolicParameters.2"/>
+        <parameters reference="/16/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//Form/field"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/16/@symbolicParameters.2"/>
+        <parameters reference="/16/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//Form/field"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/16/@symbolicParameters.2"/>
+        <parameters reference="/16/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/16/@symbolicParameters.5"/>
+        <parameters reference="/16/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//Event/action"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/16/@symbolicParameters.7"/>
+        <parameters reference="/16/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/16/@symbolicParameters.3"/>
+        <parameters reference="/16/@symbolicParameters.4"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowAbstract__GEN_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="displayMessage">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginAction">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="nextWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="pwd">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userID">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="userToLogin">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="nextWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginEvent_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="loginWindow_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="displayMessage_attr_EString">
+        <eClassifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </localVariables>
+      <constants value="ACED000574000A6E65787457696E646F77"/>
+      <constants value="ACED00057400056C6F67696E"/>
+      <constants value="ACED000574000B6C6F67696E57696E646F77"/>
+      <constants value="ACED000574000B57656C636F6D6555736572"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/17/@symbolicParameters.8"/>
+        <parameters reference="/17/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/17/@symbolicParameters.5"/>
+        <parameters reference="/17/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/17/@symbolicParameters.7"/>
+        <parameters reference="/17/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/17/@symbolicParameters.2"/>
+        <parameters reference="/17/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="../../EssentialIFML/model/essentialIFML.ecore#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/17/@bodies.0/@localVariables.0"/>
+        <parameters reference="/17/@bodies.0/@constants.0"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/17/@bodies.0/@localVariables.1"/>
+        <parameters reference="/17/@bodies.0/@constants.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/17/@bodies.0/@localVariables.2"/>
+        <parameters reference="/17/@bodies.0/@constants.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/17/@bodies.0/@localVariables.3"/>
+        <parameters reference="/17/@bodies.0/@constants.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowAbstract__CONTEXT_SRC">
+        <parameters reference="/17/@symbolicParameters.0"/>
+        <parameters reference="/17/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowAbstract__CONTEXT_CORR">
+        <parameters reference="/17/@symbolicParameters.0"/>
+        <parameters reference="/17/@symbolicParameters.1"/>
+        <parameters reference="/17/@symbolicParameters.3"/>
+        <parameters reference="/17/@symbolicParameters.4"/>
+        <parameters reference="/17/@symbolicParameters.11"/>
+        <parameters reference="/17/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowAbstract__CONTEXT_TRG">
+        <parameters reference="/17/@symbolicParameters.3"/>
+        <parameters reference="/17/@symbolicParameters.7"/>
+        <parameters reference="/17/@symbolicParameters.6"/>
+        <parameters reference="/17/@symbolicParameters.10"/>
+        <parameters reference="/17/@symbolicParameters.9"/>
+        <parameters reference="/17/@symbolicParameters.5"/>
+        <parameters reference="/17/@symbolicParameters.4"/>
+        <parameters reference="/17/@symbolicParameters.8"/>
+        <parameters reference="/17/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowsAndLinks__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="contextToEssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/18/@symbolicParameters.2"/>
+        <parameters reference="/18/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/AdaptationRules.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/18/@symbolicParameters.2"/>
+        <parameters reference="/18/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/AdaptationRules.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowsAndLinks__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <bodies/>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowsAndLinks__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <bodies/>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowsAndLinks__GEN">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="contextToEssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowsAndLinks__GEN_REFINEMENT_INVOCATIONS">
+        <parameters reference="/21/@symbolicParameters.0"/>
+        <parameters reference="/21/@symbolicParameters.1"/>
+        <parameters reference="/21/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindowsAndLinks__GEN_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="contextToEssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/AdaptationRules.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowsAndLinks__CONTEXT_SRC">
+        <parameters reference="/22/@symbolicParameters.0"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowsAndLinks__CONTEXT_CORR">
+        <parameters reference="/22/@symbolicParameters.0"/>
+        <parameters reference="/22/@symbolicParameters.1"/>
+        <parameters reference="/22/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindowsAndLinks__CONTEXT_TRG">
+        <parameters reference="/22/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+</xmi:XMI>

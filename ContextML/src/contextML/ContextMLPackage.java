@@ -38,7 +38,7 @@ public interface ContextMLPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.example.org/contextML";
+	String eNS_URI = "platform:/resource/ContextML/model/contextML.ecore";
 
 	/**
 	 * The package namespace name.
@@ -85,13 +85,22 @@ public interface ContextMLPackage extends EPackage {
 	int CONTEXT__PROVIDER = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_FEATURE_COUNT = 2;
+	int CONTEXT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Context</em>' class.
@@ -451,6 +460,17 @@ public interface ContextMLPackage extends EPackage {
 	EReference getContext_Provider();
 
 	/**
+	 * Returns the meta object for the attribute '{@link contextML.Context#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see contextML.Context#getName()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EAttribute getContext_Name();
+
+	/**
 	 * Returns the meta object for class '{@link contextML.Entity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -632,6 +652,14 @@ public interface ContextMLPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONTEXT__PROVIDER = eINSTANCE.getContext_Provider();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTEXT__NAME = eINSTANCE.getContext_Name();
 
 		/**
 		 * The meta object literal for the '{@link contextML.impl.EntityImpl <em>Entity</em>}' class.

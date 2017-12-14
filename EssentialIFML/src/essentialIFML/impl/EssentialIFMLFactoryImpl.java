@@ -60,10 +60,12 @@ public class EssentialIFMLFactoryImpl extends EFactoryImpl implements EssentialI
 			case EssentialIFMLPackage.VIEW_CONTAINER: return createViewContainer();
 			case EssentialIFMLPackage.EVENT: return createEvent();
 			case EssentialIFMLPackage.FIELD: return createField();
+			case EssentialIFMLPackage.DETAILS_TEXT: return createDetailsText();
 			case EssentialIFMLPackage.ACTION: return createAction();
 			case EssentialIFMLPackage.NAMED_ELEMENT: return createNamedElement();
 			case EssentialIFMLPackage.FORM: return createForm();
 			case EssentialIFMLPackage.DETAILS: return createDetails();
+			case EssentialIFMLPackage.ANNOTATION: return createAnnotation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -114,6 +116,16 @@ public class EssentialIFMLFactoryImpl extends EFactoryImpl implements EssentialI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DetailsText createDetailsText() {
+		DetailsTextImpl detailsText = new DetailsTextImpl();
+		return detailsText;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Action createAction() {
 		ActionImpl action = new ActionImpl();
 		return action;
@@ -147,6 +159,16 @@ public class EssentialIFMLFactoryImpl extends EFactoryImpl implements EssentialI
 	public Details createDetails() {
 		DetailsImpl details = new DetailsImpl();
 		return details;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Annotation createAnnotation() {
+		AnnotationImpl annotation = new AnnotationImpl();
+		return annotation;
 	}
 
 	/**

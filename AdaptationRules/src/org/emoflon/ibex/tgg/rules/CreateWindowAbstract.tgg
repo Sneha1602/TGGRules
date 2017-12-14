@@ -1,0 +1,99 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateWindowAbstract #with AdaptationRules
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -role -> roleName
+	}
+
+	++roleName:Role {
+		
+	}
+}
+
+#target {
+	ifml:EssentialIFMLModel {
+		-viewcontainer -> loginWindow
+		-viewcontainer -> nextWindow
+		
+	}
+
+	loginWindow:ViewContainer{
+		name =="loginWindow"
+		-viewcomponent -> loginForm
+	}
+
+	loginForm:Form{
+		-field -> userID
+		-field -> pwd
+		-event -> loginEvent
+	}
+
+	userID:Field
+
+	pwd:Field
+
+	loginEvent:Event{
+		name =="login"
+		-action -> loginAction
+	}
+
+	loginAction:Action{
+		++ -navigates -> nextWindow
+	}
+
+	nextWindow:ViewContainer{
+		name =="nextWindow"
+		++-viewcomponent -> userForm
+		-viewcomponent -> displayMessage
+	}
+
+	++userForm:Form{
+		++-event -> back
+	}
+
+	displayMessage:Details{
+		name =="WelcomeUser"
+		++-text -> Message
+	}
+
+	++Message:DetailsText{
+	}
+
+	++back:Event{
+		name:="logout"
+		++-action -> logoutAction
+	}
+
+
+	++logoutAction:Action{
+		++ -navigates -> loginWindow
+	}
+
+}
+
+#correspondence {
+
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	
+	userToLogin: CreateWindowsAndLinks{
+		#src->e
+		#trg->loginAction
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

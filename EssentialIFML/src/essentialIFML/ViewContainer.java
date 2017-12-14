@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link essentialIFML.ViewContainer#isIsDefault <em>Is Default</em>}</li>
  *   <li>{@link essentialIFML.ViewContainer#isIsLandmark <em>Is Landmark</em>}</li>
  *   <li>{@link essentialIFML.ViewContainer#getViewcomponent <em>Viewcomponent</em>}</li>
+ *   <li>{@link essentialIFML.ViewContainer#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @see essentialIFML.EssentialIFMLPackage#getViewContainer()
@@ -90,5 +91,31 @@ public interface ViewContainer extends NamedElement {
 	 * @generated
 	 */
 	EList<ViewComponent> getViewcomponent();
+
+	/**
+	 * Returns the value of the '<em><b>Annotation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Annotation</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Annotation</em>' reference.
+	 * @see #setAnnotation(Annotation)
+	 * @see essentialIFML.EssentialIFMLPackage#getViewContainer_Annotation()
+	 * @model required="true"
+	 * @generated
+	 */
+	Annotation getAnnotation();
+
+	/**
+	 * Sets the value of the '{@link essentialIFML.ViewContainer#getAnnotation <em>Annotation</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Annotation</em>' reference.
+	 * @see #getAnnotation()
+	 * @generated
+	 */
+	void setAnnotation(Annotation value);
 
 } // ViewContainer

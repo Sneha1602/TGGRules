@@ -1,7 +1,7 @@
 #using AdaptationRules.*
 #using AttrCondDefLibrary.*
 
-#rule CreateWindowforAllUsers #with AdaptationRules
+#rule CreateWindowsAndLinks #with AdaptationRules
 
 #source {
 	context:Context{
@@ -50,6 +50,7 @@
 	++windowOnlyforAdmin:ViewContainer{
 		name:= "detailsWindow"
 		++ - viewcomponent -> displayDetails
+		
 	}
 
 	++displayDetails:Details{
@@ -63,19 +64,20 @@
 }
 
 #correspondence {
-	contextToEssentialIFML :ContextToEssentialIFML{
+	contextToEssentialIFML :Context2EssentialIFML{
 		#src->context
 		#trg->ifml
 	}
 	
-	++ usertoWindows :CreateWindowForAll{
+	++userToLogin: CreateWindowsAndLinks{
 		#src->u
-		#trg->ifml
+		#trg->loginAction
 	}
 }
 
 #attributeConditions {
 	
 }
+
 
 

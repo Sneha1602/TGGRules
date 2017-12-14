@@ -38,7 +38,7 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.example.org/essentialIFML";
+	String eNS_URI = "platform:/resource/EssentialIFML/model/essentialIFML.ecore";
 
 	/**
 	 * The package namespace name.
@@ -64,7 +64,7 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 5;
+	int NAMED_ELEMENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -195,13 +195,22 @@ public interface EssentialIFMLPackage extends EPackage {
 	int VIEW_CONTAINER__VIEWCOMPONENT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Annotation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_CONTAINER__ANNOTATION = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>View Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_CONTAINER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int VIEW_CONTAINER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>View Container</em>' class.
@@ -305,6 +314,52 @@ public interface EssentialIFMLPackage extends EPackage {
 	int FIELD_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link essentialIFML.impl.DetailsTextImpl <em>Details Text</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see essentialIFML.impl.DetailsTextImpl
+	 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getDetailsText()
+	 * @generated
+	 */
+	int DETAILS_TEXT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_TEXT__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_TEXT__TEXT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Details Text</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_TEXT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Details Text</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_TEXT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link essentialIFML.impl.ActionImpl <em>Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -312,7 +367,7 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 4;
+	int ACTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -358,7 +413,7 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getViewComponent()
 	 * @generated
 	 */
-	int VIEW_COMPONENT = 8;
+	int VIEW_COMPONENT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -395,7 +450,7 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getForm()
 	 * @generated
 	 */
-	int FORM = 6;
+	int FORM = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -450,7 +505,7 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getDetails()
 	 * @generated
 	 */
-	int DETAILS = 7;
+	int DETAILS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -462,7 +517,7 @@ public interface EssentialIFMLPackage extends EPackage {
 	int DETAILS__NAME = VIEW_COMPONENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * The feature id for the '<em><b>Text</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -487,6 +542,44 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * @ordered
 	 */
 	int DETAILS_OPERATION_COUNT = VIEW_COMPONENT_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link essentialIFML.impl.AnnotationImpl <em>Annotation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see essentialIFML.impl.AnnotationImpl
+	 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getAnnotation()
+	 * @generated
+	 */
+	int ANNOTATION = 10;
+
+	/**
+	 * The feature id for the '<em><b>Annotation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANNOTATION__ANNOTATION = 0;
+
+	/**
+	 * The number of structural features of the '<em>Annotation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANNOTATION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Annotation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANNOTATION_OPERATION_COUNT = 0;
 
 
 	/**
@@ -565,6 +658,17 @@ public interface EssentialIFMLPackage extends EPackage {
 	EReference getViewContainer_Viewcomponent();
 
 	/**
+	 * Returns the meta object for the reference '{@link essentialIFML.ViewContainer#getAnnotation <em>Annotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Annotation</em>'.
+	 * @see essentialIFML.ViewContainer#getAnnotation()
+	 * @see #getViewContainer()
+	 * @generated
+	 */
+	EReference getViewContainer_Annotation();
+
+	/**
 	 * Returns the meta object for class '{@link essentialIFML.Event <em>Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -605,6 +709,27 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getField_Label();
+
+	/**
+	 * Returns the meta object for class '{@link essentialIFML.DetailsText <em>Details Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Details Text</em>'.
+	 * @see essentialIFML.DetailsText
+	 * @generated
+	 */
+	EClass getDetailsText();
+
+	/**
+	 * Returns the meta object for the attribute '{@link essentialIFML.DetailsText#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see essentialIFML.DetailsText#getText()
+	 * @see #getDetailsText()
+	 * @generated
+	 */
+	EAttribute getDetailsText_Text();
 
 	/**
 	 * Returns the meta object for class '{@link essentialIFML.Action <em>Action</em>}'.
@@ -691,15 +816,15 @@ public interface EssentialIFMLPackage extends EPackage {
 	EClass getDetails();
 
 	/**
-	 * Returns the meta object for the attribute '{@link essentialIFML.Details#getText <em>Text</em>}'.
+	 * Returns the meta object for the containment reference '{@link essentialIFML.Details#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @return the meta object for the containment reference '<em>Text</em>'.
 	 * @see essentialIFML.Details#getText()
 	 * @see #getDetails()
 	 * @generated
 	 */
-	EAttribute getDetails_Text();
+	EReference getDetails_Text();
 
 	/**
 	 * Returns the meta object for class '{@link essentialIFML.ViewComponent <em>View Component</em>}'.
@@ -710,6 +835,27 @@ public interface EssentialIFMLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getViewComponent();
+
+	/**
+	 * Returns the meta object for class '{@link essentialIFML.Annotation <em>Annotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Annotation</em>'.
+	 * @see essentialIFML.Annotation
+	 * @generated
+	 */
+	EClass getAnnotation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link essentialIFML.Annotation#getAnnotation <em>Annotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Annotation</em>'.
+	 * @see essentialIFML.Annotation#getAnnotation()
+	 * @see #getAnnotation()
+	 * @generated
+	 */
+	EAttribute getAnnotation_Annotation();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -795,6 +941,14 @@ public interface EssentialIFMLPackage extends EPackage {
 		EReference VIEW_CONTAINER__VIEWCOMPONENT = eINSTANCE.getViewContainer_Viewcomponent();
 
 		/**
+		 * The meta object literal for the '<em><b>Annotation</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VIEW_CONTAINER__ANNOTATION = eINSTANCE.getViewContainer_Annotation();
+
+		/**
 		 * The meta object literal for the '{@link essentialIFML.impl.EventImpl <em>Event</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -829,6 +983,24 @@ public interface EssentialIFMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FIELD__LABEL = eINSTANCE.getField_Label();
+
+		/**
+		 * The meta object literal for the '{@link essentialIFML.impl.DetailsTextImpl <em>Details Text</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see essentialIFML.impl.DetailsTextImpl
+		 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getDetailsText()
+		 * @generated
+		 */
+		EClass DETAILS_TEXT = eINSTANCE.getDetailsText();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DETAILS_TEXT__TEXT = eINSTANCE.getDetailsText_Text();
 
 		/**
 		 * The meta object literal for the '{@link essentialIFML.impl.ActionImpl <em>Action</em>}' class.
@@ -903,12 +1075,12 @@ public interface EssentialIFMLPackage extends EPackage {
 		EClass DETAILS = eINSTANCE.getDetails();
 
 		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Text</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DETAILS__TEXT = eINSTANCE.getDetails_Text();
+		EReference DETAILS__TEXT = eINSTANCE.getDetails_Text();
 
 		/**
 		 * The meta object literal for the '{@link essentialIFML.impl.ViewComponentImpl <em>View Component</em>}' class.
@@ -919,6 +1091,24 @@ public interface EssentialIFMLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VIEW_COMPONENT = eINSTANCE.getViewComponent();
+
+		/**
+		 * The meta object literal for the '{@link essentialIFML.impl.AnnotationImpl <em>Annotation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see essentialIFML.impl.AnnotationImpl
+		 * @see essentialIFML.impl.EssentialIFMLPackageImpl#getAnnotation()
+		 * @generated
+		 */
+		EClass ANNOTATION = eINSTANCE.getAnnotation();
+
+		/**
+		 * The meta object literal for the '<em><b>Annotation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANNOTATION__ANNOTATION = eINSTANCE.getAnnotation_Annotation();
 
 	}
 

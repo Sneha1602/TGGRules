@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated essentialIFML -->
       <factory
-            uri="http://www.example.org/essentialIFML"
+            uri="platform:/resource/EssentialIFML/model/essentialIFML.ecore"
             class="essentialIFML.provider.EssentialIFMLItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

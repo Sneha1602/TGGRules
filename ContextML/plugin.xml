@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated contextML -->
       <package
-            uri="http://www.example.org/contextML"
+            uri="platform:/resource/ContextML/model/contextML.ecore"
             class="contextML.ContextMLPackage"
             genModel="model/contextML.genmodel"/>
    </extension>

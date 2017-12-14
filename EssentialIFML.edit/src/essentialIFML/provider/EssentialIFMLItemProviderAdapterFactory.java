@@ -164,6 +164,29 @@ public class EssentialIFMLItemProviderAdapterFactory extends EssentialIFMLAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link essentialIFML.DetailsText} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DetailsTextItemProvider detailsTextItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link essentialIFML.DetailsText}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDetailsTextAdapter() {
+		if (detailsTextItemProvider == null) {
+			detailsTextItemProvider = new DetailsTextItemProvider(this);
+		}
+
+		return detailsTextItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link essentialIFML.Action} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -253,6 +276,29 @@ public class EssentialIFMLItemProviderAdapterFactory extends EssentialIFMLAdapte
 		}
 
 		return detailsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link essentialIFML.Annotation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AnnotationItemProvider annotationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link essentialIFML.Annotation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnnotationAdapter() {
+		if (annotationItemProvider == null) {
+			annotationItemProvider = new AnnotationItemProvider(this);
+		}
+
+		return annotationItemProvider;
 	}
 
 	/**
@@ -358,10 +404,12 @@ public class EssentialIFMLItemProviderAdapterFactory extends EssentialIFMLAdapte
 		if (viewContainerItemProvider != null) viewContainerItemProvider.dispose();
 		if (eventItemProvider != null) eventItemProvider.dispose();
 		if (fieldItemProvider != null) fieldItemProvider.dispose();
+		if (detailsTextItemProvider != null) detailsTextItemProvider.dispose();
 		if (actionItemProvider != null) actionItemProvider.dispose();
 		if (namedElementItemProvider != null) namedElementItemProvider.dispose();
 		if (formItemProvider != null) formItemProvider.dispose();
 		if (detailsItemProvider != null) detailsItemProvider.dispose();
+		if (annotationItemProvider != null) annotationItemProvider.dispose();
 	}
 
 }

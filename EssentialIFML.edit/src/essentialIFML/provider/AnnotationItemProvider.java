@@ -1,11 +1,10 @@
 /**
  */
-package contextML.provider;
+package essentialIFML.provider;
 
 
-import contextML.Context;
-import contextML.ContextMLFactory;
-import contextML.ContextMLPackage;
+import essentialIFML.Annotation;
+import essentialIFML.EssentialIFMLPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,8 +13,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -29,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link contextML.Context} object.
+ * This is the item provider adapter for a {@link essentialIFML.Annotation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ContextItemProvider 
+public class AnnotationItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -48,7 +45,7 @@ public class ContextItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextItemProvider(AdapterFactory adapterFactory) {
+	public AnnotationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -63,25 +60,25 @@ public class ContextItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addAnnotationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Annotation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addAnnotationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Context_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Context_name_feature", "_UI_Context_type"),
-				 ContextMLPackage.Literals.CONTEXT__NAME,
+				 getString("_UI_Annotation_annotation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Annotation_annotation_feature", "_UI_Annotation_type"),
+				 EssentialIFMLPackage.Literals.ANNOTATION__ANNOTATION,
 				 true,
 				 false,
 				 false,
@@ -91,45 +88,14 @@ public class ContextItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ContextMLPackage.Literals.CONTEXT__ENTITY);
-			childrenFeatures.add(ContextMLPackage.Literals.CONTEXT__PROVIDER);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns Context.gif.
+	 * This returns Annotation.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Context"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Annotation"));
 	}
 
 	/**
@@ -140,10 +106,10 @@ public class ContextItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Context)object).getName();
+		String label = ((Annotation)object).getAnnotation();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Context_type") :
-			getString("_UI_Context_type") + " " + label;
+			getString("_UI_Annotation_type") :
+			getString("_UI_Annotation_type") + " " + label;
 	}
 	
 
@@ -158,13 +124,9 @@ public class ContextItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Context.class)) {
-			case ContextMLPackage.CONTEXT__NAME:
+		switch (notification.getFeatureID(Annotation.class)) {
+			case EssentialIFMLPackage.ANNOTATION__ANNOTATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ContextMLPackage.CONTEXT__ENTITY:
-			case ContextMLPackage.CONTEXT__PROVIDER:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -180,26 +142,6 @@ public class ContextItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContextMLPackage.Literals.CONTEXT__ENTITY,
-				 ContextMLFactory.eINSTANCE.createUser()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContextMLPackage.Literals.CONTEXT__ENTITY,
-				 ContextMLFactory.eINSTANCE.createPlatform()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContextMLPackage.Literals.CONTEXT__ENTITY,
-				 ContextMLFactory.eINSTANCE.createEnvironment()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContextMLPackage.Literals.CONTEXT__PROVIDER,
-				 ContextMLFactory.eINSTANCE.createProvider()));
 	}
 
 	/**
@@ -210,7 +152,7 @@ public class ContextItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ContextMLEditPlugin.INSTANCE;
+		return EssentialIFMLEditPlugin.INSTANCE;
 	}
 
 }

@@ -3,12 +3,15 @@
 package essentialIFML.impl;
 
 import essentialIFML.Details;
+import essentialIFML.DetailsText;
 import essentialIFML.EssentialIFMLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -26,24 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class DetailsImpl extends ViewComponentImpl implements Details {
 	/**
-	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * The cached value of the '{@link #getText() <em>Text</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TEXT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getText()
-	 * @generated
-	 * @ordered
-	 */
-	protected String text = TEXT_EDEFAULT;
+	protected DetailsText text;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +62,7 @@ public class DetailsImpl extends ViewComponentImpl implements Details {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getText() {
+	public DetailsText getText() {
 		return text;
 	}
 
@@ -78,11 +71,47 @@ public class DetailsImpl extends ViewComponentImpl implements Details {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setText(String newText) {
-		String oldText = text;
+	public NotificationChain basicSetText(DetailsText newText, NotificationChain msgs) {
+		DetailsText oldText = text;
 		text = newText;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EssentialIFMLPackage.DETAILS__TEXT, oldText, text));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EssentialIFMLPackage.DETAILS__TEXT, oldText, newText);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setText(DetailsText newText) {
+		if (newText != text) {
+			NotificationChain msgs = null;
+			if (text != null)
+				msgs = ((InternalEObject)text).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EssentialIFMLPackage.DETAILS__TEXT, null, msgs);
+			if (newText != null)
+				msgs = ((InternalEObject)newText).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EssentialIFMLPackage.DETAILS__TEXT, null, msgs);
+			msgs = basicSetText(newText, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EssentialIFMLPackage.DETAILS__TEXT, newText, newText));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case EssentialIFMLPackage.DETAILS__TEXT:
+				return basicSetText(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -108,7 +137,7 @@ public class DetailsImpl extends ViewComponentImpl implements Details {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case EssentialIFMLPackage.DETAILS__TEXT:
-				setText((String)newValue);
+				setText((DetailsText)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,7 +152,7 @@ public class DetailsImpl extends ViewComponentImpl implements Details {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case EssentialIFMLPackage.DETAILS__TEXT:
-				setText(TEXT_EDEFAULT);
+				setText((DetailsText)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,25 +167,9 @@ public class DetailsImpl extends ViewComponentImpl implements Details {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case EssentialIFMLPackage.DETAILS__TEXT:
-				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
+				return text != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (text: ");
-		result.append(text);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DetailsImpl
