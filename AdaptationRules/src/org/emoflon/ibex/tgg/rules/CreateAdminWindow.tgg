@@ -4,22 +4,12 @@
 #rule CreateAdminWindow #extends CreateWindowAbstract #with AdaptationRules
 
 #source {
-	context:Context{
-		-entity -> e
-	}
-
-	e:User {
-		++ -role -> roleName
-	}
-
-	++roleName:Admin {
-		
-	}
+	++roleName:Admin
 }
 
 #target {
 	ifml:EssentialIFMLModel {
-		++ -viewcontainer -> windowOnlyforAdmin
+		-viewcontainer -> windowOnlyforAdmin
 	}
 
 	++userForm:Form{
@@ -39,7 +29,7 @@
 		text:="Welcome, You are admin"
 	}
 
-	windowOnlyforAdmin:ViewContainer{
+	windowOnlyforAdmin:ViewContainer {
 		++ - viewcomponent-> backForm
 		
 	}
@@ -58,15 +48,6 @@
 	}
 	
 	nextWindow: ViewContainer
-	
-}
-
-#correspondence {
-
-}
-
-#attributeConditions {
-	
 }
 
 

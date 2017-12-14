@@ -4,31 +4,12 @@
 #rule CreateUserWindow #extends CreateWindowAbstract #with AdaptationRules
 
 #source {
-	context:Context{
-		-entity -> e
-	}
-
-	e:User {
-		++ -role -> roleName
-	}
-
-	++roleName:Admin {
-		
-	}
+	++roleName:Admin
 }
 
 #target {	
-	++Message:DetailsText{
+	++Message:DetailsText {
 		text:="Welcome, You are student"
 	}
-
 }
-
-#correspondence {
-}
-
-#attributeConditions {
-	
-}
-
 

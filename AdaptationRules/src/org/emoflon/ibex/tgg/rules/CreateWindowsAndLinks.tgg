@@ -45,7 +45,9 @@
 		++ - viewcomponent -> displayMessage
 	}
 
-	++displayMessage:Details
+	++displayMessage:Details {
+		name := "WelcomeUser"
+	}
 
 	++windowOnlyforAdmin:ViewContainer{
 		name:= "detailsWindow"

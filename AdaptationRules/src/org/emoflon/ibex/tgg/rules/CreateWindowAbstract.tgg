@@ -12,34 +12,25 @@
 		++ -role -> roleName
 	}
 
-	++roleName:Role {
-		
-	}
+	++roleName:Role
 }
 
 #target {
 	ifml:EssentialIFMLModel {
 		-viewcontainer -> loginWindow
 		-viewcontainer -> nextWindow
-		
 	}
 
-	loginWindow:ViewContainer{
+	loginWindow:ViewContainer {
 		name =="loginWindow"
 		-viewcomponent -> loginForm
 	}
 
-	loginForm:Form{
-		-field -> userID
-		-field -> pwd
+	loginForm:Form {
 		-event -> loginEvent
 	}
 
-	userID:Field
-
-	pwd:Field
-
-	loginEvent:Event{
+	loginEvent:Event {
 		name =="login"
 		-action -> loginAction
 	}
@@ -48,25 +39,24 @@
 		++ -navigates -> nextWindow
 	}
 
-	nextWindow:ViewContainer{
+	nextWindow:ViewContainer {
 		name =="nextWindow"
-		++-viewcomponent -> userForm
 		-viewcomponent -> displayMessage
+		++-viewcomponent -> userForm
 	}
 
 	++userForm:Form{
 		++-event -> back
 	}
 
-	displayMessage:Details{
-		name =="WelcomeUser"
+	displayMessage:Details {
+		name == "WelcomeUser"
 		++-text -> Message
 	}
 
-	++Message:DetailsText{
-	}
+	++Message:DetailsText
 
-	++back:Event{
+	++back:Event {
 		name:="logout"
 		++-action -> logoutAction
 	}

@@ -1,15 +1,14 @@
 package org.emoflon.ibex.tgg.run.adaptationrules;
 
 import java.io.IOException;
-import contextML.impl.ContextMLPackageImpl;
-import essentialIFML.impl.EssentialIFMLPackageImpl;
 
 import org.apache.log4j.BasicConfigurator;
-import org.apache.commons.lang3.NotImplementedException;
-
 import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN;
 import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGENStopCriterion;
 import org.emoflon.ibex.tgg.runtime.engine.DemoclesEngine;
+
+import contextML.impl.ContextMLPackageImpl;
+import essentialIFML.impl.EssentialIFMLPackageImpl;
 
 public class MODELGEN_App extends MODELGEN {
 
@@ -27,6 +26,7 @@ public class MODELGEN_App extends MODELGEN {
 		stop.setTimeOutInMS(1000);
 		stop.setMaxRuleCount("Context2EssentialIFML", 1);
 		stop.setMaxRuleCount("CreateWindowsAndLinks", 1);
+		//stop.setMaxRuleCount("CreateUserWindow", 0);
 		generator.setStopCriterion(stop);
 		
 		logger.info("Starting MODELGEN");
