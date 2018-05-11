@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link essentialIFML.ViewContainer#isIsLandmark <em>Is Landmark</em>}</li>
  *   <li>{@link essentialIFML.ViewContainer#getViewcomponent <em>Viewcomponent</em>}</li>
  *   <li>{@link essentialIFML.ViewContainer#getAnnotation <em>Annotation</em>}</li>
+ *   <li>{@link essentialIFML.ViewContainer#getNavBarContainer <em>Nav Bar Container</em>}</li>
  * </ul>
  *
  * @see essentialIFML.EssentialIFMLPackage#getViewContainer()
@@ -117,5 +118,21 @@ public interface ViewContainer extends NamedElement {
 	 * @generated
 	 */
 	void setAnnotation(Annotation value);
+
+	/**
+	 * Returns the value of the '<em><b>Nav Bar Container</b></em>' reference list.
+	 * The list contents are of type {@link essentialIFML.ViewContainer}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nav Bar Container</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nav Bar Container</em>' reference list.
+	 * @see essentialIFML.EssentialIFMLPackage#getViewContainer_NavBarContainer()
+	 * @model
+	 * @generated
+	 */
+	EList<ViewContainer> getNavBarContainer();
 
 } // ViewContainer

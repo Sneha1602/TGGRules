@@ -1,0 +1,47 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationCreateAdminNavBar  #with AdaptationRules
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -role -> roleName
+	}
+
+	++roleName:Admin
+}
+
+#target {
+	ifml:EssentialIFMLModel{
+		-viewcontainer->allWindows
+		
+	}
+	allWindows:ViewContainer{
+		++ -navBarContainer -> Administration1
+		++ -navBarContainer -> Administration2
+	}
+
+	Administration1: ViewContainer
+	Administration2: ViewContainer
+}
+
+#correspondence {
+	
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	++roleToWindow:Role2Window{
+		#src->roleName
+		#trg->allWindows
+	}
+}
+
+
+
+

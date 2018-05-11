@@ -31,6 +31,15 @@ public interface EssentialIFMLFactory extends EFactory {
 	EssentialIFMLModel createEssentialIFMLModel();
 
 	/**
+	 * Returns a new object of class '<em>Zoom Screen</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Zoom Screen</em>'.
+	 * @generated
+	 */
+	ZoomScreen createZoomScreen();
+
+	/**
 	 * Returns a new object of class '<em>View Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +119,33 @@ public interface EssentialIFMLFactory extends EFactory {
 	 * @generated
 	 */
 	Annotation createAnnotation();
+
+	/**
+	 * Returns a new object of class '<em>Increase Button Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Increase Button Size</em>'.
+	 * @generated
+	 */
+	IncreaseButtonSize createIncreaseButtonSize();
+
+	/**
+	 * Returns a new object of class '<em>Decrease Button Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Decrease Button Size</em>'.
+	 * @generated
+	 */
+	DecreaseButtonSize createDecreaseButtonSize();
+
+	/**
+	 * Returns a new object of class '<em>Light Background Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Light Background Color</em>'.
+	 * @generated
+	 */
+	LightBackgroundColor createLightBackgroundColor();
 
 	/**
 	 * Returns the package supported by this factory.

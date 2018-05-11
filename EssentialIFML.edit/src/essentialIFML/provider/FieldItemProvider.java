@@ -46,6 +46,7 @@ public class FieldItemProvider extends NamedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addLabelPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -64,6 +65,28 @@ public class FieldItemProvider extends NamedElementItemProvider {
 				 getString("_UI_Field_label_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Field_label_feature", "_UI_Field_type"),
 				 EssentialIFMLPackage.Literals.FIELD__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Field_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Field_type_feature", "_UI_Field_type"),
+				 EssentialIFMLPackage.Literals.FIELD__TYPE,
 				 true,
 				 false,
 				 false,
@@ -111,6 +134,7 @@ public class FieldItemProvider extends NamedElementItemProvider {
 
 		switch (notification.getFeatureID(Field.class)) {
 			case EssentialIFMLPackage.FIELD__LABEL:
+			case EssentialIFMLPackage.FIELD__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

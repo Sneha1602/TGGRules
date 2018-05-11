@@ -72,6 +72,10 @@ public class ContextMLAdapterFactory extends AdapterFactoryImpl {
 				return createContextAdapter();
 			}
 			@Override
+			public Adapter caseAge(Age object) {
+				return createAgeAdapter();
+			}
+			@Override
 			public Adapter caseEntity(Entity object) {
 				return createEntityAdapter();
 			}
@@ -108,6 +112,10 @@ public class ContextMLAdapterFactory extends AdapterFactoryImpl {
 				return createPropertyAdapter();
 			}
 			@Override
+			public Adapter caseColorBlind(ColorBlind object) {
+				return createColorBlindAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -138,6 +146,20 @@ public class ContextMLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createContextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link contextML.Age <em>Age</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see contextML.Age
+	 * @generated
+	 */
+	public Adapter createAgeAdapter() {
 		return null;
 	}
 
@@ -264,6 +286,20 @@ public class ContextMLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link contextML.ColorBlind <em>Color Blind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see contextML.ColorBlind
+	 * @generated
+	 */
+	public Adapter createColorBlindAdapter() {
 		return null;
 	}
 

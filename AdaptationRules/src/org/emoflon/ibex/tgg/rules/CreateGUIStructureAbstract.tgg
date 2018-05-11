@@ -1,0 +1,33 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateGUIStructureAbstract #with AdaptationRules
+
+#source { 
+	e:User {
+		++ -role -> roleName
+	}
+
+	++roleName: Role
+	}
+
+
+#target {
+	loginAction: Action
+}
+
+#correspondence {
+		
+		userToLoginAction: User2Action{
+		#src->e
+		#trg->loginAction
+	}
+	
+}
+
+#attributeConditions {
+	
+}
+
+
+

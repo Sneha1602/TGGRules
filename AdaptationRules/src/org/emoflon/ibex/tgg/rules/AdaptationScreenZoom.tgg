@@ -1,0 +1,42 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationScreenZoom #with AdaptationRules
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -age -> ageOfUser
+	}
+
+	++ageOfUser:Age
+}
+
+#target {
+	essentialIFML:EssentialIFMLModel {
+		++ -screenZoom -> allWindows
+	}
+
+	allWindows:ZoomScreen
+}
+
+#correspondence {
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->essentialIFML
+	}
+	
+	++userAge2ScreenZoom :UserAge2ScreenZoom{
+		#src->ageOfUser
+		#trg->allWindows
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

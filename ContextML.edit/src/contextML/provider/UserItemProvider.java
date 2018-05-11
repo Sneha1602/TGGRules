@@ -49,6 +49,8 @@ public class UserItemProvider extends EntityItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addIdPropertyDescriptor(object);
+			addColorBlindPropertyDescriptor(object);
+			addAgePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -71,6 +73,50 @@ public class UserItemProvider extends EntityItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Color Blind feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addColorBlindPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_User_colorBlind_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_User_colorBlind_feature", "_UI_User_type"),
+				 ContextMLPackage.Literals.USER__COLOR_BLIND,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Age feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAgePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_User_age_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_User_age_feature", "_UI_User_type"),
+				 ContextMLPackage.Literals.USER__AGE,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

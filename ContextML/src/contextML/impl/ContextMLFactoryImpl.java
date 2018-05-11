@@ -57,12 +57,14 @@ public class ContextMLFactoryImpl extends EFactoryImpl implements ContextMLFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ContextMLPackage.CONTEXT: return createContext();
+			case ContextMLPackage.AGE: return createAge();
 			case ContextMLPackage.PROVIDER: return createProvider();
 			case ContextMLPackage.USER: return createUser();
 			case ContextMLPackage.PLATFORM: return createPlatform();
 			case ContextMLPackage.ENVIRONMENT: return createEnvironment();
 			case ContextMLPackage.ADMIN: return createAdmin();
 			case ContextMLPackage.STUDENT: return createStudent();
+			case ContextMLPackage.COLOR_BLIND: return createColorBlind();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -76,6 +78,16 @@ public class ContextMLFactoryImpl extends EFactoryImpl implements ContextMLFacto
 	public Context createContext() {
 		ContextImpl context = new ContextImpl();
 		return context;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Age createAge() {
+		AgeImpl age = new AgeImpl();
+		return age;
 	}
 
 	/**
@@ -136,6 +148,16 @@ public class ContextMLFactoryImpl extends EFactoryImpl implements ContextMLFacto
 	public Student createStudent() {
 		StudentImpl student = new StudentImpl();
 		return student;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColorBlind createColorBlind() {
+		ColorBlindImpl colorBlind = new ColorBlindImpl();
+		return colorBlind;
 	}
 
 	/**

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -34,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link essentialIFML.impl.ViewContainerImpl#isIsLandmark <em>Is Landmark</em>}</li>
  *   <li>{@link essentialIFML.impl.ViewContainerImpl#getViewcomponent <em>Viewcomponent</em>}</li>
  *   <li>{@link essentialIFML.impl.ViewContainerImpl#getAnnotation <em>Annotation</em>}</li>
+ *   <li>{@link essentialIFML.impl.ViewContainerImpl#getNavBarContainer <em>Nav Bar Container</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,6 +100,16 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 	 * @ordered
 	 */
 	protected Annotation annotation;
+
+	/**
+	 * The cached value of the '{@link #getNavBarContainer() <em>Nav Bar Container</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNavBarContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ViewContainer> navBarContainer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -215,6 +227,18 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ViewContainer> getNavBarContainer() {
+		if (navBarContainer == null) {
+			navBarContainer = new EObjectResolvingEList<ViewContainer>(ViewContainer.class, this, EssentialIFMLPackage.VIEW_CONTAINER__NAV_BAR_CONTAINER);
+		}
+		return navBarContainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -241,6 +265,8 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 			case EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION:
 				if (resolve) return getAnnotation();
 				return basicGetAnnotation();
+			case EssentialIFMLPackage.VIEW_CONTAINER__NAV_BAR_CONTAINER:
+				return getNavBarContainer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -267,6 +293,10 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 			case EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION:
 				setAnnotation((Annotation)newValue);
 				return;
+			case EssentialIFMLPackage.VIEW_CONTAINER__NAV_BAR_CONTAINER:
+				getNavBarContainer().clear();
+				getNavBarContainer().addAll((Collection<? extends ViewContainer>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -291,6 +321,9 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 			case EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION:
 				setAnnotation((Annotation)null);
 				return;
+			case EssentialIFMLPackage.VIEW_CONTAINER__NAV_BAR_CONTAINER:
+				getNavBarContainer().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -311,6 +344,8 @@ public class ViewContainerImpl extends NamedElementImpl implements ViewContainer
 				return viewcomponent != null && !viewcomponent.isEmpty();
 			case EssentialIFMLPackage.VIEW_CONTAINER__ANNOTATION:
 				return annotation != null;
+			case EssentialIFMLPackage.VIEW_CONTAINER__NAV_BAR_CONTAINER:
+				return navBarContainer != null && !navBarContainer.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

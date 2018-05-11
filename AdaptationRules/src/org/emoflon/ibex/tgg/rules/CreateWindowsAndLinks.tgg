@@ -14,8 +14,11 @@
 #target {
 	ifml:EssentialIFMLModel {
 		++ - viewcontainer -> loginWindow
-		++ - viewcontainer -> nextWindow
+		++ - viewcontainer -> adminWindow
+		++ - viewcontainer -> studentWindow
 		++ - viewcontainer -> windowOnlyforAdmin
+		++ - viewcontainer -> navContainer1
+		++ - viewcontainer -> navContainer2
 	}
 
 	++loginWindow:ViewContainer{
@@ -40,15 +43,41 @@
 
 	++loginAction:Action
 
-	++nextWindow:ViewContainer{
-		name:= "nextWindow"
-		++ - viewcomponent -> displayMessage
+	++adminWindow:ViewContainer{
+		name:= "adminWindow"
+		++ - viewcomponent -> displayMessageAdmin
+		++-viewcomponent -> userForm
+	}
+	
+	++userForm:Form{
+		++ -event -> next
 	}
 
-	++displayMessage:Details {
-		name := "WelcomeUser"
+	++next:Event{
+		name:="details"
+		++-action -> showDetails
 	}
 
+	++showDetails:Action{
+		++-navigates -> windowOnlyforAdmin
+	}
+
+	
+	++displayMessageAdmin:Details {
+		name := "Admin"
+		text := "Admin" 
+	}
+	
+	++studentWindow: ViewContainer{
+		name:= "studentWindow"
+		++ - viewcomponent -> displayMessageStudent
+	}
+	
+	++displayMessageStudent:Details {
+		name := "Student"
+		text := "Student" 
+	}
+	
 	++windowOnlyforAdmin:ViewContainer{
 		name:= "detailsWindow"
 		++ - viewcomponent -> displayDetails
@@ -57,12 +86,11 @@
 
 	++displayDetails:Details{
 		name:= "details"
-		++-text -> AdminDetails
+		text:="Only Admin can view this"
 	}
-
-	++AdminDetails:DetailsText{
-		text:= "Show Admin details"
-	}
+	
+	++navContainer1 : ViewContainer 
+	++navContainer2 : ViewContainer 
 }
 
 #correspondence {
@@ -71,7 +99,12 @@
 		#trg->ifml
 	}
 	
-	++userToLogin: CreateWindowsAndLinks{
+	++userToLoginWindow: CreateWindowsAndLinks{
+		#src->u
+		#trg->loginWindow
+	}
+	
+	++userToLoginAction: User2Action{
 		#src->u
 		#trg->loginAction
 	}

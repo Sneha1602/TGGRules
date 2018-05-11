@@ -31,6 +31,15 @@ public interface ContextMLFactory extends EFactory {
 	Context createContext();
 
 	/**
+	 * Returns a new object of class '<em>Age</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Age</em>'.
+	 * @generated
+	 */
+	Age createAge();
+
+	/**
 	 * Returns a new object of class '<em>Provider</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +92,15 @@ public interface ContextMLFactory extends EFactory {
 	 * @generated
 	 */
 	Student createStudent();
+
+	/**
+	 * Returns a new object of class '<em>Color Blind</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Color Blind</em>'.
+	 * @generated
+	 */
+	ColorBlind createColorBlind();
 
 	/**
 	 * Returns the package supported by this factory.

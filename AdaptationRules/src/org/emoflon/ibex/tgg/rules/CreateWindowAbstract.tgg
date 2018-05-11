@@ -16,70 +16,27 @@
 }
 
 #target {
-	ifml:EssentialIFMLModel {
-		-viewcontainer -> loginWindow
-		-viewcontainer -> nextWindow
+	ifml:EssentialIFMLModel{
+		-viewcontainer->loginWindow
+		
 	}
-
-	loginWindow:ViewContainer {
-		name =="loginWindow"
-		-viewcomponent -> loginForm
-	}
-
-	loginForm:Form {
-		-event -> loginEvent
-	}
-
-	loginEvent:Event {
-		name =="login"
-		-action -> loginAction
-	}
-
-	loginAction:Action{
-		++ -navigates -> nextWindow
-	}
-
-	nextWindow:ViewContainer {
-		name =="nextWindow"
-		-viewcomponent -> displayMessage
-		++-viewcomponent -> userForm
-	}
-
-	++userForm:Form{
-		++-event -> back
-	}
-
-	displayMessage:Details {
-		name == "WelcomeUser"
-		++-text -> Message
-	}
-
-	++Message:DetailsText
-
-	++back:Event {
-		name:="logout"
-		++-action -> logoutAction
-	}
-
-
-	++logoutAction:Action{
-		++ -navigates -> loginWindow
-	}
-
+	loginWindow:ViewContainer 
+	
+	
 }
 
 #correspondence {
-
 	context2EssentialIFML :Context2EssentialIFML{
 		#src->context
 		#trg->ifml
 	}
-	
-	
-	userToLogin: CreateWindowsAndLinks{
+
+	userToLogin:CreateWindowsAndLinks{
 		#src->e
-		#trg->loginAction
+		#trg->loginWindow
 	}
+	
+	
 }
 
 #attributeConditions {

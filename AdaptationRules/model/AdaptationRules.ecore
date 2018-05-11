@@ -4,10 +4,26 @@
     nsPrefix="AdaptationRules">
   <eClassifiers xsi:type="ecore:EClass" name="Context2EssentialIFML">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//Context"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CreateWindowsAndLinks">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//User"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role2Window">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User2Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserColorBlind2AdaptColorBlind">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//ColorBlind"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/LightBackgroundColor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserAge2ScreenZoom">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//Age"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ZoomScreen"/>
   </eClassifiers>
 </ecore:EPackage>

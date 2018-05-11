@@ -5,42 +5,61 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>essentialIFML.ecore</foreignModel>
-  <genPackages prefix="EssentialIFML" disposableProviderFactory="true" ecorePackage="essentialIFML.ecore#/">
-    <genClasses ecoreClass="essentialIFML.ecore#//EssentialIFMLModel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//EssentialIFMLModel/action"/>
+  <genPackages prefix="EssentialIFML" disposableProviderFactory="true" ecorePackage="essentialIFML.ecore#/0">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="essentialIFML.ecore#/0/Datatype">
+      <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#/0/Datatype/String"/>
+      <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#/0/Datatype/Integer"/>
+    </genEnums>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/EssentialIFMLModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/EssentialIFMLModel/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/EssentialIFMLModel/increasebuttonsize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/EssentialIFMLModel/decreasebuttonsize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/EssentialIFMLModel/changeBackgroundColor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/EssentialIFMLModel/screenZoom"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//ViewContainer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//ViewContainer/isDefault"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//ViewContainer/isLandmark"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//ViewContainer/viewcomponent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//ViewContainer/annotation"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/ZoomScreen"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/ViewContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/ViewContainer/isDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/ViewContainer/isLandmark"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/ViewContainer/viewcomponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/ViewContainer/annotation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/ViewContainer/navBarContainer"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//Event">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Event/action"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/Event">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/Event/action"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//Field">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Field/label"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/Field/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/Field/type"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//DetailsText">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//DetailsText/text"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/DetailsText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/DetailsText/text"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//Action">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Action/navigates"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/Action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/Action/navigates"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//NamedElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//NamedElement/name"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/NamedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/NamedElement/id"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//Form">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Form/field"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Form/event"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/Form">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/Form/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/Form/event"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//Details">
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference essentialIFML.ecore#//Details/text"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/Details">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/Details/text"/>
     </genClasses>
-    <genClasses ecoreClass="essentialIFML.ecore#//ViewComponent"/>
-    <genClasses ecoreClass="essentialIFML.ecore#//Annotation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Annotation/annotation"/>
+    <genClasses image="false" ecoreClass="essentialIFML.ecore#/0/ViewComponent"/>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#/0/Annotation/annotation"/>
     </genClasses>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/IncreaseButtonSize">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/IncreaseButtonSize/action"/>
+    </genClasses>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/DecreaseButtonSize">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference essentialIFML.ecore#/0/DecreaseButtonSize/action"/>
+    </genClasses>
+    <genClasses ecoreClass="essentialIFML.ecore#/0/LightBackgroundColor"/>
   </genPackages>
 </genmodel:GenModel>

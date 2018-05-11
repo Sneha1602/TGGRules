@@ -1,0 +1,45 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationButtonSize #with AdaptationRules
+
+#source { 
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -role -> roleName
+	}
+
+	++roleName:Admin
+}
+
+#target {
+ifml: EssentialIFMLModel{
+	++-increasebuttonsize->increaseButtonSize
+}
+	++increaseButtonSize: IncreaseButtonSize{
+		++-action->showDetails
+	}
+	showDetails:Action
+	
+}
+
+#correspondence {
+	
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+}
+
+
+
+
+
+
+#attributeConditions {
+	
+}

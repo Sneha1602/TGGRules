@@ -21,29 +21,29 @@ package essentialIFML;
  */
 public interface Details extends ViewComponent {
 	/**
-	 * Returns the value of the '<em><b>Text</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Text</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Text</em>' containment reference.
-	 * @see #setText(DetailsText)
+	 * @return the value of the '<em>Text</em>' attribute.
+	 * @see #setText(String)
 	 * @see essentialIFML.EssentialIFMLPackage#getDetails_Text()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	DetailsText getText();
+	String getText();
 
 	/**
-	 * Sets the value of the '{@link essentialIFML.Details#getText <em>Text</em>}' containment reference.
+	 * Sets the value of the '{@link essentialIFML.Details#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Text</em>' containment reference.
+	 * @param value the new value of the '<em>Text</em>' attribute.
 	 * @see #getText()
 	 * @generated
 	 */
-	void setText(DetailsText value);
+	void setText(String value);
 
 } // Details

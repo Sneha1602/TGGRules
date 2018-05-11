@@ -1,0 +1,45 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationCreateStudentNavBar  #with AdaptationRules
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -role -> roleName
+	}
+
+	++roleName:Student
+}
+
+#target {
+	ifml:EssentialIFMLModel{
+		-viewcontainer->allWindows
+		
+	}
+	allWindows:ViewContainer{
+		++ -navBarContainer -> StudentWindow1
+		
+	}
+
+	StudentWindow1: ViewContainer
+	
+}
+
+#correspondence {	
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	++roleToWindow:Role2Window{
+		#src->roleName
+		#trg->allWindows
+	}
+	
+}
+
+

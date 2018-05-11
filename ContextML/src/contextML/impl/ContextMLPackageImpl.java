@@ -3,6 +3,8 @@
 package contextML.impl;
 
 import contextML.Admin;
+import contextML.Age;
+import contextML.ColorBlind;
 import contextML.Context;
 import contextML.ContextMLFactory;
 import contextML.ContextMLPackage;
@@ -35,6 +37,13 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 	 * @generated
 	 */
 	private EClass contextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,6 +107,13 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 	 * @generated
 	 */
 	private EClass propertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass colorBlindEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -201,6 +217,24 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getContext_Property() {
+		return (EReference)contextEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAge() {
+		return ageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntity() {
 		return entityEClass;
 	}
@@ -248,6 +282,24 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 	 */
 	public EAttribute getUser_Id() {
 		return (EAttribute)userEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUser_ColorBlind() {
+		return (EReference)userEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUser_Age() {
+		return (EReference)userEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -318,6 +370,15 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getColorBlind() {
+		return colorBlindEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ContextMLFactory getContextMLFactory() {
 		return (ContextMLFactory)getEFactoryInstance();
 	}
@@ -345,6 +406,9 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 		createEReference(contextEClass, CONTEXT__ENTITY);
 		createEReference(contextEClass, CONTEXT__PROVIDER);
 		createEAttribute(contextEClass, CONTEXT__NAME);
+		createEReference(contextEClass, CONTEXT__PROPERTY);
+
+		ageEClass = createEClass(AGE);
 
 		entityEClass = createEClass(ENTITY);
 
@@ -354,6 +418,8 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 		userEClass = createEClass(USER);
 		createEReference(userEClass, USER__ROLE);
 		createEAttribute(userEClass, USER__ID);
+		createEReference(userEClass, USER__COLOR_BLIND);
+		createEReference(userEClass, USER__AGE);
 
 		platformEClass = createEClass(PLATFORM);
 
@@ -367,6 +433,8 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 
 		propertyEClass = createEClass(PROPERTY);
 		createEReference(propertyEClass, PROPERTY__PROVIDER);
+
+		colorBlindEClass = createEClass(COLOR_BLIND);
 	}
 
 	/**
@@ -397,18 +465,23 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		ageEClass.getESuperTypes().add(this.getProperty());
 		userEClass.getESuperTypes().add(this.getEntity());
 		platformEClass.getESuperTypes().add(this.getEntity());
 		environmentEClass.getESuperTypes().add(this.getEntity());
 		roleEClass.getESuperTypes().add(this.getProperty());
 		adminEClass.getESuperTypes().add(this.getRole());
 		studentEClass.getESuperTypes().add(this.getRole());
+		colorBlindEClass.getESuperTypes().add(this.getProperty());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContext_Entity(), this.getEntity(), null, "entity", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_Provider(), this.getProvider(), null, "provider", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContext_Name(), ecorePackage.getEString(), "name", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContext_Property(), this.getProperty(), null, "property", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ageEClass, Age.class, "Age", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(entityEClass, Entity.class, "Entity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -418,6 +491,8 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 		initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUser_Role(), this.getRole(), null, "role", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUser_Id(), ecorePackage.getEString(), "id", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUser_ColorBlind(), this.getProperty(), null, "colorBlind", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUser_Age(), this.getAge(), null, "age", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(platformEClass, Platform.class, "Platform", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -431,6 +506,8 @@ public class ContextMLPackageImpl extends EPackageImpl implements ContextMLPacka
 
 		initEClass(propertyEClass, Property.class, "Property", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProperty_Provider(), this.getProvider(), null, "provider", null, 1, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(colorBlindEClass, ColorBlind.class, "ColorBlind", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

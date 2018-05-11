@@ -5,6 +5,7 @@ package contextML.impl;
 import contextML.Context;
 import contextML.ContextMLPackage;
 import contextML.Entity;
+import contextML.Property;
 import contextML.Provider;
 
 import java.util.Collection;
@@ -21,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -34,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link contextML.impl.ContextImpl#getEntity <em>Entity</em>}</li>
  *   <li>{@link contextML.impl.ContextImpl#getProvider <em>Provider</em>}</li>
  *   <li>{@link contextML.impl.ContextImpl#getName <em>Name</em>}</li>
+ *   <li>{@link contextML.impl.ContextImpl#getProperty <em>Property</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,6 +81,16 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getProperty() <em>Property</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Property> property;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,6 +161,18 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Property> getProperty() {
+		if (property == null) {
+			property = new EObjectResolvingEList<Property>(Property.class, this, ContextMLPackage.CONTEXT__PROPERTY);
+		}
+		return property;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -173,6 +198,8 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 				return getProvider();
 			case ContextMLPackage.CONTEXT__NAME:
 				return getName();
+			case ContextMLPackage.CONTEXT__PROPERTY:
+				return getProperty();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,6 +224,10 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 			case ContextMLPackage.CONTEXT__NAME:
 				setName((String)newValue);
 				return;
+			case ContextMLPackage.CONTEXT__PROPERTY:
+				getProperty().clear();
+				getProperty().addAll((Collection<? extends Property>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -218,6 +249,9 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 			case ContextMLPackage.CONTEXT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ContextMLPackage.CONTEXT__PROPERTY:
+				getProperty().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -236,6 +270,8 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 				return provider != null && !provider.isEmpty();
 			case ContextMLPackage.CONTEXT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ContextMLPackage.CONTEXT__PROPERTY:
+				return property != null && !property.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -5,6 +5,7 @@ package essentialIFML.impl;
 import essentialIFML.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -57,6 +58,7 @@ public class EssentialIFMLFactoryImpl extends EFactoryImpl implements EssentialI
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case EssentialIFMLPackage.ESSENTIAL_IFML_MODEL: return createEssentialIFMLModel();
+			case EssentialIFMLPackage.ZOOM_SCREEN: return createZoomScreen();
 			case EssentialIFMLPackage.VIEW_CONTAINER: return createViewContainer();
 			case EssentialIFMLPackage.EVENT: return createEvent();
 			case EssentialIFMLPackage.FIELD: return createField();
@@ -66,8 +68,41 @@ public class EssentialIFMLFactoryImpl extends EFactoryImpl implements EssentialI
 			case EssentialIFMLPackage.FORM: return createForm();
 			case EssentialIFMLPackage.DETAILS: return createDetails();
 			case EssentialIFMLPackage.ANNOTATION: return createAnnotation();
+			case EssentialIFMLPackage.INCREASE_BUTTON_SIZE: return createIncreaseButtonSize();
+			case EssentialIFMLPackage.DECREASE_BUTTON_SIZE: return createDecreaseButtonSize();
+			case EssentialIFMLPackage.LIGHT_BACKGROUND_COLOR: return createLightBackgroundColor();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case EssentialIFMLPackage.DATATYPE:
+				return createDatatypeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case EssentialIFMLPackage.DATATYPE:
+				return convertDatatypeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -79,6 +114,16 @@ public class EssentialIFMLFactoryImpl extends EFactoryImpl implements EssentialI
 	public EssentialIFMLModel createEssentialIFMLModel() {
 		EssentialIFMLModelImpl essentialIFMLModel = new EssentialIFMLModelImpl();
 		return essentialIFMLModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ZoomScreen createZoomScreen() {
+		ZoomScreenImpl zoomScreen = new ZoomScreenImpl();
+		return zoomScreen;
 	}
 
 	/**
@@ -169,6 +214,56 @@ public class EssentialIFMLFactoryImpl extends EFactoryImpl implements EssentialI
 	public Annotation createAnnotation() {
 		AnnotationImpl annotation = new AnnotationImpl();
 		return annotation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IncreaseButtonSize createIncreaseButtonSize() {
+		IncreaseButtonSizeImpl increaseButtonSize = new IncreaseButtonSizeImpl();
+		return increaseButtonSize;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DecreaseButtonSize createDecreaseButtonSize() {
+		DecreaseButtonSizeImpl decreaseButtonSize = new DecreaseButtonSizeImpl();
+		return decreaseButtonSize;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LightBackgroundColor createLightBackgroundColor() {
+		LightBackgroundColorImpl lightBackgroundColor = new LightBackgroundColorImpl();
+		return lightBackgroundColor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Datatype createDatatypeFromString(EDataType eDataType, String initialValue) {
+		Datatype result = Datatype.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDatatypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

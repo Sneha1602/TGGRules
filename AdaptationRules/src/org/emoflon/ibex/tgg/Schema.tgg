@@ -20,8 +20,29 @@
 	
 	CreateWindowsAndLinks{
 		#src->User
+		#trg->ViewContainer
+	}
+	
+	Role2Window{
+		#src->Role
+		#trg->ViewContainer
+	}
+	
+	User2Action{
+		#src->User
 		#trg->Action
 	}
+	
+	UserColorBlind2AdaptColorBlind{
+		#src->ColorBlind
+		#trg->LightBackgroundColor
+			}
+	
+	UserAge2ScreenZoom{
+		#src->Age
+		#trg->ZoomScreen
+	}
+	
 }
 
 #attributeConditions {

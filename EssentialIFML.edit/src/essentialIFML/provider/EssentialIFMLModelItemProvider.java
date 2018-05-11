@@ -15,6 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -46,8 +47,31 @@ public class EssentialIFMLModelItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addScreenZoomPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Screen Zoom feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addScreenZoomPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EssentialIFMLModel_screenZoom_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EssentialIFMLModel_screenZoom_feature", "_UI_EssentialIFMLModel_type"),
+				 EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__SCREEN_ZOOM,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -64,6 +88,9 @@ public class EssentialIFMLModelItemProvider extends NamedElementItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__VIEWCONTAINER);
 			childrenFeatures.add(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__ACTION);
+			childrenFeatures.add(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__INCREASEBUTTONSIZE);
+			childrenFeatures.add(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__DECREASEBUTTONSIZE);
+			childrenFeatures.add(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__CHANGE_BACKGROUND_COLOR);
 		}
 		return childrenFeatures;
 	}
@@ -121,6 +148,9 @@ public class EssentialIFMLModelItemProvider extends NamedElementItemProvider {
 		switch (notification.getFeatureID(EssentialIFMLModel.class)) {
 			case EssentialIFMLPackage.ESSENTIAL_IFML_MODEL__VIEWCONTAINER:
 			case EssentialIFMLPackage.ESSENTIAL_IFML_MODEL__ACTION:
+			case EssentialIFMLPackage.ESSENTIAL_IFML_MODEL__INCREASEBUTTONSIZE:
+			case EssentialIFMLPackage.ESSENTIAL_IFML_MODEL__DECREASEBUTTONSIZE:
+			case EssentialIFMLPackage.ESSENTIAL_IFML_MODEL__CHANGE_BACKGROUND_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -147,6 +177,21 @@ public class EssentialIFMLModelItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__ACTION,
 				 EssentialIFMLFactory.eINSTANCE.createAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__INCREASEBUTTONSIZE,
+				 EssentialIFMLFactory.eINSTANCE.createIncreaseButtonSize()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__DECREASEBUTTONSIZE,
+				 EssentialIFMLFactory.eINSTANCE.createDecreaseButtonSize()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EssentialIFMLPackage.Literals.ESSENTIAL_IFML_MODEL__CHANGE_BACKGROUND_COLOR,
+				 EssentialIFMLFactory.eINSTANCE.createLightBackgroundColor()));
 	}
 
 }

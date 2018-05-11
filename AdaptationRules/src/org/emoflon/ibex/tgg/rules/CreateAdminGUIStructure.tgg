@@ -1,0 +1,29 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#rule CreateAdminGUIStructure #extends CreateGUIStructureAbstract #with AdaptationRules
+
+#source { 
+	
+	++roleName:Admin
+	
+}
+
+#target {
+	loginAction: Action{
+		++-navigates -> adminWindow
+	}
+	adminWindow: ViewContainer
+	
+}
+
+#correspondence {
+	++roleToViewContainer: Role2Window{
+		#src->roleName
+		#trg->adminWindow
+	}
+}
+
+#attributeConditions {
+	
+}

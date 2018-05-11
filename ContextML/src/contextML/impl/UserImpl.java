@@ -2,7 +2,9 @@
  */
 package contextML.impl;
 
+import contextML.Age;
 import contextML.ContextMLPackage;
+import contextML.Property;
 import contextML.Role;
 import contextML.User;
 
@@ -24,6 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link contextML.impl.UserImpl#getRole <em>Role</em>}</li>
  *   <li>{@link contextML.impl.UserImpl#getId <em>Id</em>}</li>
+ *   <li>{@link contextML.impl.UserImpl#getColorBlind <em>Color Blind</em>}</li>
+ *   <li>{@link contextML.impl.UserImpl#getAge <em>Age</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +61,26 @@ public class UserImpl extends EntityImpl implements User {
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getColorBlind() <em>Color Blind</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColorBlind()
+	 * @generated
+	 * @ordered
+	 */
+	protected Property colorBlind;
+
+	/**
+	 * The cached value of the '{@link #getAge() <em>Age</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAge()
+	 * @generated
+	 * @ordered
+	 */
+	protected Age age;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -146,6 +170,82 @@ public class UserImpl extends EntityImpl implements User {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Property getColorBlind() {
+		if (colorBlind != null && colorBlind.eIsProxy()) {
+			InternalEObject oldColorBlind = (InternalEObject)colorBlind;
+			colorBlind = (Property)eResolveProxy(oldColorBlind);
+			if (colorBlind != oldColorBlind) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContextMLPackage.USER__COLOR_BLIND, oldColorBlind, colorBlind));
+			}
+		}
+		return colorBlind;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Property basicGetColorBlind() {
+		return colorBlind;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setColorBlind(Property newColorBlind) {
+		Property oldColorBlind = colorBlind;
+		colorBlind = newColorBlind;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ContextMLPackage.USER__COLOR_BLIND, oldColorBlind, colorBlind));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Age getAge() {
+		if (age != null && age.eIsProxy()) {
+			InternalEObject oldAge = (InternalEObject)age;
+			age = (Age)eResolveProxy(oldAge);
+			if (age != oldAge) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContextMLPackage.USER__AGE, oldAge, age));
+			}
+		}
+		return age;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Age basicGetAge() {
+		return age;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAge(Age newAge) {
+		Age oldAge = age;
+		age = newAge;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ContextMLPackage.USER__AGE, oldAge, age));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -167,6 +267,12 @@ public class UserImpl extends EntityImpl implements User {
 				return getRole();
 			case ContextMLPackage.USER__ID:
 				return getId();
+			case ContextMLPackage.USER__COLOR_BLIND:
+				if (resolve) return getColorBlind();
+				return basicGetColorBlind();
+			case ContextMLPackage.USER__AGE:
+				if (resolve) return getAge();
+				return basicGetAge();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -184,6 +290,12 @@ public class UserImpl extends EntityImpl implements User {
 				return;
 			case ContextMLPackage.USER__ID:
 				setId((String)newValue);
+				return;
+			case ContextMLPackage.USER__COLOR_BLIND:
+				setColorBlind((Property)newValue);
+				return;
+			case ContextMLPackage.USER__AGE:
+				setAge((Age)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -203,6 +315,12 @@ public class UserImpl extends EntityImpl implements User {
 			case ContextMLPackage.USER__ID:
 				setId(ID_EDEFAULT);
 				return;
+			case ContextMLPackage.USER__COLOR_BLIND:
+				setColorBlind((Property)null);
+				return;
+			case ContextMLPackage.USER__AGE:
+				setAge((Age)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -219,6 +337,10 @@ public class UserImpl extends EntityImpl implements User {
 				return role != null;
 			case ContextMLPackage.USER__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case ContextMLPackage.USER__COLOR_BLIND:
+				return colorBlind != null;
+			case ContextMLPackage.USER__AGE:
+				return age != null;
 		}
 		return super.eIsSet(featureID);
 	}

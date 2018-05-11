@@ -95,6 +95,29 @@ public class ContextMLItemProviderAdapterFactory extends ContextMLAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link contextML.Age} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AgeItemProvider ageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link contextML.Age}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAgeAdapter() {
+		if (ageItemProvider == null) {
+			ageItemProvider = new AgeItemProvider(this);
+		}
+
+		return ageItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link contextML.Provider} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -233,6 +256,29 @@ public class ContextMLItemProviderAdapterFactory extends ContextMLAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link contextML.ColorBlind} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColorBlindItemProvider colorBlindItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link contextML.ColorBlind}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColorBlindAdapter() {
+		if (colorBlindItemProvider == null) {
+			colorBlindItemProvider = new ColorBlindItemProvider(this);
+		}
+
+		return colorBlindItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -332,12 +378,14 @@ public class ContextMLItemProviderAdapterFactory extends ContextMLAdapterFactory
 	 */
 	public void dispose() {
 		if (contextItemProvider != null) contextItemProvider.dispose();
+		if (ageItemProvider != null) ageItemProvider.dispose();
 		if (providerItemProvider != null) providerItemProvider.dispose();
 		if (userItemProvider != null) userItemProvider.dispose();
 		if (platformItemProvider != null) platformItemProvider.dispose();
 		if (environmentItemProvider != null) environmentItemProvider.dispose();
 		if (adminItemProvider != null) adminItemProvider.dispose();
 		if (studentItemProvider != null) studentItemProvider.dispose();
+		if (colorBlindItemProvider != null) colorBlindItemProvider.dispose();
 	}
 
 }

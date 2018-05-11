@@ -61,6 +61,7 @@ public class NamedElementItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,6 +80,28 @@ public class NamedElementItemProvider
 				 getString("_UI_NamedElement_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_name_feature", "_UI_NamedElement_type"),
 				 EssentialIFMLPackage.Literals.NAMED_ELEMENT__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_NamedElement_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_id_feature", "_UI_NamedElement_type"),
+				 EssentialIFMLPackage.Literals.NAMED_ELEMENT__ID,
 				 true,
 				 false,
 				 false,
@@ -126,6 +149,7 @@ public class NamedElementItemProvider
 
 		switch (notification.getFeatureID(NamedElement.class)) {
 			case EssentialIFMLPackage.NAMED_ELEMENT__NAME:
+			case EssentialIFMLPackage.NAMED_ELEMENT__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

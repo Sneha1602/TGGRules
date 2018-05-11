@@ -1,0 +1,42 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationColorBlindness #with AdaptationRules
+
+#source { 
+	context:Context{
+		-entity -> e
+	}
+	e:User {
+		  ++ -colorBlindness -> colorBlind
+	}
+
+	++ colorBlind: ColorBlind
+}
+
+
+#target {
+	ifml:EssentialIFMLModel{
+		++ -changeBackgroundColor -> allWindows
+}
+
+	 allWindows : LightBackgroundColor
+	
+}
+
+#correspondence {
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	++userColorBlind2AdaptColorBlind:UserColorBlind2AdaptColorBlind{
+		#src->colorBlind
+		#trg->allWindows
+	}
+	
+}
+
+#attributeConditions {
+	
+}

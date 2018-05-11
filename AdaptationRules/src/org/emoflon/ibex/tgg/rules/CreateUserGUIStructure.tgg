@@ -1,0 +1,29 @@
+#using AdaptationRules.*
+#using AttrCondDefLibrary.*
+
+#rule CreateUserGUIStructure #extends CreateGUIStructureAbstract #with AdaptationRules
+
+#source { 
+	
+++roleName:Student
+	
+}
+
+#target {
+	loginAction: Action{
+		++-navigates -> studentWindow
+	}
+	studentWindow: ViewContainer
+	
+}
+
+#correspondence {
+	++roleToViewContainer: Role2Window{
+		#src->roleName
+		#trg->studentWindow
+	}
+}
+
+#attributeConditions {
+	
+}

@@ -8,7 +8,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="provider" upperBound="-1"
         eType="#//Provider" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
+        eType="#//Property"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Age" eSuperTypes="#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Provider">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -17,6 +20,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//Role"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="colorBlind" eType="#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="age" eType="#//Age"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Platform" eSuperTypes="#//Entity"/>
   <eClassifiers xsi:type="ecore:EClass" name="Environment" eSuperTypes="#//Entity"/>
@@ -27,4 +32,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="provider" lowerBound="1"
         eType="#//Provider"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorBlind" eSuperTypes="#//Property"/>
 </ecore:EPackage>

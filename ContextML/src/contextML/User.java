@@ -14,6 +14,8 @@ package contextML;
  * <ul>
  *   <li>{@link contextML.User#getRole <em>Role</em>}</li>
  *   <li>{@link contextML.User#getId <em>Id</em>}</li>
+ *   <li>{@link contextML.User#getColorBlind <em>Color Blind</em>}</li>
+ *   <li>{@link contextML.User#getAge <em>Age</em>}</li>
  * </ul>
  *
  * @see contextML.ContextMLPackage#getUser()
@@ -72,5 +74,57 @@ public interface User extends Entity {
 	 * @generated
 	 */
 	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Color Blind</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Color Blind</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Color Blind</em>' reference.
+	 * @see #setColorBlind(Property)
+	 * @see contextML.ContextMLPackage#getUser_ColorBlind()
+	 * @model
+	 * @generated
+	 */
+	Property getColorBlind();
+
+	/**
+	 * Sets the value of the '{@link contextML.User#getColorBlind <em>Color Blind</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Color Blind</em>' reference.
+	 * @see #getColorBlind()
+	 * @generated
+	 */
+	void setColorBlind(Property value);
+
+	/**
+	 * Returns the value of the '<em><b>Age</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Age</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Age</em>' reference.
+	 * @see #setAge(Age)
+	 * @see contextML.ContextMLPackage#getUser_Age()
+	 * @model
+	 * @generated
+	 */
+	Age getAge();
+
+	/**
+	 * Sets the value of the '{@link contextML.User#getAge <em>Age</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Age</em>' reference.
+	 * @see #getAge()
+	 * @generated
+	 */
+	void setAge(Age value);
 
 } // User

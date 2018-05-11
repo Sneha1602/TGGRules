@@ -95,6 +95,29 @@ public class EssentialIFMLItemProviderAdapterFactory extends EssentialIFMLAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link essentialIFML.ZoomScreen} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZoomScreenItemProvider zoomScreenItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link essentialIFML.ZoomScreen}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZoomScreenAdapter() {
+		if (zoomScreenItemProvider == null) {
+			zoomScreenItemProvider = new ZoomScreenItemProvider(this);
+		}
+
+		return zoomScreenItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link essentialIFML.ViewContainer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -302,6 +325,75 @@ public class EssentialIFMLItemProviderAdapterFactory extends EssentialIFMLAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link essentialIFML.IncreaseButtonSize} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IncreaseButtonSizeItemProvider increaseButtonSizeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link essentialIFML.IncreaseButtonSize}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIncreaseButtonSizeAdapter() {
+		if (increaseButtonSizeItemProvider == null) {
+			increaseButtonSizeItemProvider = new IncreaseButtonSizeItemProvider(this);
+		}
+
+		return increaseButtonSizeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link essentialIFML.DecreaseButtonSize} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DecreaseButtonSizeItemProvider decreaseButtonSizeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link essentialIFML.DecreaseButtonSize}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDecreaseButtonSizeAdapter() {
+		if (decreaseButtonSizeItemProvider == null) {
+			decreaseButtonSizeItemProvider = new DecreaseButtonSizeItemProvider(this);
+		}
+
+		return decreaseButtonSizeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link essentialIFML.LightBackgroundColor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LightBackgroundColorItemProvider lightBackgroundColorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link essentialIFML.LightBackgroundColor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLightBackgroundColorAdapter() {
+		if (lightBackgroundColorItemProvider == null) {
+			lightBackgroundColorItemProvider = new LightBackgroundColorItemProvider(this);
+		}
+
+		return lightBackgroundColorItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -401,6 +493,7 @@ public class EssentialIFMLItemProviderAdapterFactory extends EssentialIFMLAdapte
 	 */
 	public void dispose() {
 		if (essentialIFMLModelItemProvider != null) essentialIFMLModelItemProvider.dispose();
+		if (zoomScreenItemProvider != null) zoomScreenItemProvider.dispose();
 		if (viewContainerItemProvider != null) viewContainerItemProvider.dispose();
 		if (eventItemProvider != null) eventItemProvider.dispose();
 		if (fieldItemProvider != null) fieldItemProvider.dispose();
@@ -410,6 +503,9 @@ public class EssentialIFMLItemProviderAdapterFactory extends EssentialIFMLAdapte
 		if (formItemProvider != null) formItemProvider.dispose();
 		if (detailsItemProvider != null) detailsItemProvider.dispose();
 		if (annotationItemProvider != null) annotationItemProvider.dispose();
+		if (increaseButtonSizeItemProvider != null) increaseButtonSizeItemProvider.dispose();
+		if (decreaseButtonSizeItemProvider != null) decreaseButtonSizeItemProvider.dispose();
+		if (lightBackgroundColorItemProvider != null) lightBackgroundColorItemProvider.dispose();
 	}
 
 }

@@ -72,6 +72,13 @@ public class ContextMLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ContextMLPackage.AGE: {
+				Age age = (Age)theEObject;
+				T result = caseAge(age);
+				if (result == null) result = caseProperty(age);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ContextMLPackage.ENTITY: {
 				Entity entity = (Entity)theEObject;
 				T result = caseEntity(entity);
@@ -134,6 +141,13 @@ public class ContextMLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ContextMLPackage.COLOR_BLIND: {
+				ColorBlind colorBlind = (ColorBlind)theEObject;
+				T result = caseColorBlind(colorBlind);
+				if (result == null) result = caseProperty(colorBlind);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -150,6 +164,21 @@ public class ContextMLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseContext(Context object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Age</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Age</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAge(Age object) {
 		return null;
 	}
 
@@ -285,6 +314,21 @@ public class ContextMLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProperty(Property object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Color Blind</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Color Blind</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseColorBlind(ColorBlind object) {
 		return null;
 	}
 

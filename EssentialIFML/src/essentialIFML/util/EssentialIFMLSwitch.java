@@ -73,6 +73,13 @@ public class EssentialIFMLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case EssentialIFMLPackage.ZOOM_SCREEN: {
+				ZoomScreen zoomScreen = (ZoomScreen)theEObject;
+				T result = caseZoomScreen(zoomScreen);
+				if (result == null) result = caseNamedElement(zoomScreen);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case EssentialIFMLPackage.VIEW_CONTAINER: {
 				ViewContainer viewContainer = (ViewContainer)theEObject;
 				T result = caseViewContainer(viewContainer);
@@ -143,6 +150,27 @@ public class EssentialIFMLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case EssentialIFMLPackage.INCREASE_BUTTON_SIZE: {
+				IncreaseButtonSize increaseButtonSize = (IncreaseButtonSize)theEObject;
+				T result = caseIncreaseButtonSize(increaseButtonSize);
+				if (result == null) result = caseNamedElement(increaseButtonSize);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EssentialIFMLPackage.DECREASE_BUTTON_SIZE: {
+				DecreaseButtonSize decreaseButtonSize = (DecreaseButtonSize)theEObject;
+				T result = caseDecreaseButtonSize(decreaseButtonSize);
+				if (result == null) result = caseNamedElement(decreaseButtonSize);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EssentialIFMLPackage.LIGHT_BACKGROUND_COLOR: {
+				LightBackgroundColor lightBackgroundColor = (LightBackgroundColor)theEObject;
+				T result = caseLightBackgroundColor(lightBackgroundColor);
+				if (result == null) result = caseNamedElement(lightBackgroundColor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -159,6 +187,21 @@ public class EssentialIFMLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEssentialIFMLModel(EssentialIFMLModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Zoom Screen</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Zoom Screen</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZoomScreen(ZoomScreen object) {
 		return null;
 	}
 
@@ -309,6 +352,51 @@ public class EssentialIFMLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAnnotation(Annotation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Increase Button Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Increase Button Size</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIncreaseButtonSize(IncreaseButtonSize object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Decrease Button Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Decrease Button Size</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDecreaseButtonSize(DecreaseButtonSize object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Light Background Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Light Background Color</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLightBackgroundColor(LightBackgroundColor object) {
 		return null;
 	}
 

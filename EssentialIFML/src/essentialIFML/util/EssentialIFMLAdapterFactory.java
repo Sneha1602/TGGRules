@@ -72,6 +72,10 @@ public class EssentialIFMLAdapterFactory extends AdapterFactoryImpl {
 				return createEssentialIFMLModelAdapter();
 			}
 			@Override
+			public Adapter caseZoomScreen(ZoomScreen object) {
+				return createZoomScreenAdapter();
+			}
+			@Override
 			public Adapter caseViewContainer(ViewContainer object) {
 				return createViewContainerAdapter();
 			}
@@ -112,6 +116,18 @@ public class EssentialIFMLAdapterFactory extends AdapterFactoryImpl {
 				return createAnnotationAdapter();
 			}
 			@Override
+			public Adapter caseIncreaseButtonSize(IncreaseButtonSize object) {
+				return createIncreaseButtonSizeAdapter();
+			}
+			@Override
+			public Adapter caseDecreaseButtonSize(DecreaseButtonSize object) {
+				return createDecreaseButtonSizeAdapter();
+			}
+			@Override
+			public Adapter caseLightBackgroundColor(LightBackgroundColor object) {
+				return createLightBackgroundColorAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -142,6 +158,20 @@ public class EssentialIFMLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEssentialIFMLModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link essentialIFML.ZoomScreen <em>Zoom Screen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see essentialIFML.ZoomScreen
+	 * @generated
+	 */
+	public Adapter createZoomScreenAdapter() {
 		return null;
 	}
 
@@ -282,6 +312,48 @@ public class EssentialIFMLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAnnotationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link essentialIFML.IncreaseButtonSize <em>Increase Button Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see essentialIFML.IncreaseButtonSize
+	 * @generated
+	 */
+	public Adapter createIncreaseButtonSizeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link essentialIFML.DecreaseButtonSize <em>Decrease Button Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see essentialIFML.DecreaseButtonSize
+	 * @generated
+	 */
+	public Adapter createDecreaseButtonSizeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link essentialIFML.LightBackgroundColor <em>Light Background Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see essentialIFML.LightBackgroundColor
+	 * @generated
+	 */
+	public Adapter createLightBackgroundColorAdapter() {
 		return null;
 	}
 

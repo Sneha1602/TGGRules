@@ -94,13 +94,22 @@ public interface ContextMLPackage extends EPackage {
 	int CONTEXT__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Property</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__PROPERTY = 3;
+
+	/**
 	 * The number of structural features of the '<em>Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_FEATURE_COUNT = 3;
+	int CONTEXT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Context</em>' class.
@@ -119,25 +128,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getEntity()
 	 * @generated
 	 */
-	int ENTITY = 1;
-
-	/**
-	 * The number of structural features of the '<em>Entity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Entity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OPERATION_COUNT = 0;
+	int ENTITY = 2;
 
 	/**
 	 * The meta object id for the '{@link contextML.impl.ProviderImpl <em>Provider</em>}' class.
@@ -147,34 +138,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getProvider()
 	 * @generated
 	 */
-	int PROVIDER = 2;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDER__ID = 0;
-
-	/**
-	 * The number of structural features of the '<em>Provider</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDER_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Provider</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDER_OPERATION_COUNT = 0;
+	int PROVIDER = 3;
 
 	/**
 	 * The meta object id for the '{@link contextML.impl.UserImpl <em>User</em>}' class.
@@ -184,43 +148,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getUser()
 	 * @generated
 	 */
-	int USER = 3;
-
-	/**
-	 * The feature id for the '<em><b>Role</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__ROLE = ENTITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__ID = ENTITY_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+	int USER = 4;
 
 	/**
 	 * The meta object id for the '{@link contextML.impl.PlatformImpl <em>Platform</em>}' class.
@@ -230,25 +158,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getPlatform()
 	 * @generated
 	 */
-	int PLATFORM = 4;
-
-	/**
-	 * The number of structural features of the '<em>Platform</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Platform</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+	int PLATFORM = 5;
 
 	/**
 	 * The meta object id for the '{@link contextML.impl.EnvironmentImpl <em>Environment</em>}' class.
@@ -258,25 +168,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getEnvironment()
 	 * @generated
 	 */
-	int ENVIRONMENT = 5;
-
-	/**
-	 * The number of structural features of the '<em>Environment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Environment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+	int ENVIRONMENT = 6;
 
 	/**
 	 * The meta object id for the '{@link contextML.impl.PropertyImpl <em>Property</em>}' class.
@@ -286,7 +178,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getProperty()
 	 * @generated
 	 */
-	int PROPERTY = 9;
+	int PROPERTY = 10;
 
 	/**
 	 * The feature id for the '<em><b>Provider</b></em>' reference.
@@ -316,6 +208,178 @@ public interface ContextMLPackage extends EPackage {
 	int PROPERTY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link contextML.impl.AgeImpl <em>Age</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see contextML.impl.AgeImpl
+	 * @see contextML.impl.ContextMLPackageImpl#getAge()
+	 * @generated
+	 */
+	int AGE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGE__PROVIDER = PROPERTY__PROVIDER;
+
+	/**
+	 * The number of structural features of the '<em>Age</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGE_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Age</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGE_OPERATION_COUNT = PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROVIDER__ID = 0;
+
+	/**
+	 * The number of structural features of the '<em>Provider</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROVIDER_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Provider</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROVIDER_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__ROLE = ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__ID = ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Color Blind</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__COLOR_BLIND = ENTITY_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Age</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__AGE = ENTITY_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Platform</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLATFORM_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Platform</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLATFORM_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Environment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Environment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link contextML.impl.RoleImpl <em>Role</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -323,7 +387,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getRole()
 	 * @generated
 	 */
-	int ROLE = 6;
+	int ROLE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Provider</b></em>' reference.
@@ -360,7 +424,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getAdmin()
 	 * @generated
 	 */
-	int ADMIN = 7;
+	int ADMIN = 8;
 
 	/**
 	 * The feature id for the '<em><b>Provider</b></em>' reference.
@@ -397,7 +461,7 @@ public interface ContextMLPackage extends EPackage {
 	 * @see contextML.impl.ContextMLPackageImpl#getStudent()
 	 * @generated
 	 */
-	int STUDENT = 8;
+	int STUDENT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Provider</b></em>' reference.
@@ -425,6 +489,44 @@ public interface ContextMLPackage extends EPackage {
 	 * @ordered
 	 */
 	int STUDENT_OPERATION_COUNT = ROLE_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link contextML.impl.ColorBlindImpl <em>Color Blind</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see contextML.impl.ColorBlindImpl
+	 * @see contextML.impl.ContextMLPackageImpl#getColorBlind()
+	 * @generated
+	 */
+	int COLOR_BLIND = 11;
+
+	/**
+	 * The feature id for the '<em><b>Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_BLIND__PROVIDER = PROPERTY__PROVIDER;
+
+	/**
+	 * The number of structural features of the '<em>Color Blind</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_BLIND_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Color Blind</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_BLIND_OPERATION_COUNT = PROPERTY_OPERATION_COUNT + 0;
 
 
 	/**
@@ -469,6 +571,27 @@ public interface ContextMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getContext_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link contextML.Context#getProperty <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Property</em>'.
+	 * @see contextML.Context#getProperty()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EReference getContext_Property();
+
+	/**
+	 * Returns the meta object for class '{@link contextML.Age <em>Age</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Age</em>'.
+	 * @see contextML.Age
+	 * @generated
+	 */
+	EClass getAge();
 
 	/**
 	 * Returns the meta object for class '{@link contextML.Entity <em>Entity</em>}'.
@@ -532,6 +655,28 @@ public interface ContextMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUser_Id();
+
+	/**
+	 * Returns the meta object for the reference '{@link contextML.User#getColorBlind <em>Color Blind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Color Blind</em>'.
+	 * @see contextML.User#getColorBlind()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EReference getUser_ColorBlind();
+
+	/**
+	 * Returns the meta object for the reference '{@link contextML.User#getAge <em>Age</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Age</em>'.
+	 * @see contextML.User#getAge()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EReference getUser_Age();
 
 	/**
 	 * Returns the meta object for class '{@link contextML.Platform <em>Platform</em>}'.
@@ -605,6 +750,16 @@ public interface ContextMLPackage extends EPackage {
 	EReference getProperty_Provider();
 
 	/**
+	 * Returns the meta object for class '{@link contextML.ColorBlind <em>Color Blind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Color Blind</em>'.
+	 * @see contextML.ColorBlind
+	 * @generated
+	 */
+	EClass getColorBlind();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -662,6 +817,24 @@ public interface ContextMLPackage extends EPackage {
 		EAttribute CONTEXT__NAME = eINSTANCE.getContext_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Property</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTEXT__PROPERTY = eINSTANCE.getContext_Property();
+
+		/**
+		 * The meta object literal for the '{@link contextML.impl.AgeImpl <em>Age</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see contextML.impl.AgeImpl
+		 * @see contextML.impl.ContextMLPackageImpl#getAge()
+		 * @generated
+		 */
+		EClass AGE = eINSTANCE.getAge();
+
+		/**
 		 * The meta object literal for the '{@link contextML.impl.EntityImpl <em>Entity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -714,6 +887,22 @@ public interface ContextMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute USER__ID = eINSTANCE.getUser_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Color Blind</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference USER__COLOR_BLIND = eINSTANCE.getUser_ColorBlind();
+
+		/**
+		 * The meta object literal for the '<em><b>Age</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference USER__AGE = eINSTANCE.getUser_Age();
 
 		/**
 		 * The meta object literal for the '{@link contextML.impl.PlatformImpl <em>Platform</em>}' class.
@@ -782,6 +971,16 @@ public interface ContextMLPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROPERTY__PROVIDER = eINSTANCE.getProperty_Provider();
+
+		/**
+		 * The meta object literal for the '{@link contextML.impl.ColorBlindImpl <em>Color Blind</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see contextML.impl.ColorBlindImpl
+		 * @see contextML.impl.ContextMLPackageImpl#getColorBlind()
+		 * @generated
+		 */
+		EClass COLOR_BLIND = eINSTANCE.getColorBlind();
 
 	}
 

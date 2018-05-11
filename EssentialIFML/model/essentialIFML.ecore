@@ -1,49 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="essentialIFML" nsURI="platform:/resource/EssentialIFML/model/essentialIFML.ecore"
-    nsPrefix="essentialIFML">
-  <eClassifiers xsi:type="ecore:EClass" name="EssentialIFMLModel" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="viewcontainer" lowerBound="1"
-        upperBound="-1" eType="#//ViewContainer" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
-        upperBound="-1" eType="#//Action" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ViewContainer" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLandmark" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="viewcomponent" upperBound="-1"
-        eType="#//ViewComponent" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="annotation" lowerBound="1"
-        eType="#//Annotation"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
-        upperBound="-1" eType="#//Action"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Field" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DetailsText" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="navigates" eType="#//ViewContainer"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#//ViewComponent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" upperBound="-1"
-        eType="#//Field" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="event" lowerBound="1" upperBound="-1"
-        eType="#//Event" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Details" eSuperTypes="#//ViewComponent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//DetailsText"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ViewComponent" abstract="true" eSuperTypes="#//NamedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Annotation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="annotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-</ecore:EPackage>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="essentialIFML" nsURI="platform:/resource/EssentialIFML/model/essentialIFML.ecore"
+      nsPrefix="essentialIFML">
+    <eClassifiers xsi:type="ecore:EClass" name="EssentialIFMLModel" eSuperTypes="#/0/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="viewcontainer" lowerBound="1"
+          upperBound="-1" eType="#/0/ViewContainer" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+          upperBound="-1" eType="#/0/Action" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="increasebuttonsize" upperBound="-1"
+          eType="#/0/IncreaseButtonSize" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="decreasebuttonsize" upperBound="-1"
+          eType="#/0/DecreaseButtonSize" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeBackgroundColor"
+          eType="#/0/LightBackgroundColor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="screenZoom" eType="#/0/ZoomScreen"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ZoomScreen" eSuperTypes="#/0/NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ViewContainer" eSuperTypes="#/0/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLandmark" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="viewcomponent" upperBound="-1"
+          eType="#/0/ViewComponent" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="annotation" lowerBound="1"
+          eType="#/0/Annotation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="navBarContainer" upperBound="-1"
+          eType="#/0/ViewContainer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#/0/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+          upperBound="-1" eType="#/0/Action"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Field" eSuperTypes="#/0/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#/0/Datatype"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DetailsText" eSuperTypes="#/0/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#/0/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="navigates" eType="#/0/ViewContainer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#/0/ViewComponent">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1"
+          upperBound="-1" eType="#/0/Field" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="event" lowerBound="1"
+          upperBound="-1" eType="#/0/Event" containment="true" resolveProxies="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Details" eSuperTypes="#/0/ViewComponent">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ViewComponent" abstract="true" eSuperTypes="#/0/NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Annotation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="annotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Datatype">
+      <eLiterals name="String"/>
+      <eLiterals name="Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IncreaseButtonSize" eSuperTypes="#/0/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#/0/Action"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DecreaseButtonSize" eSuperTypes="#/0/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#/0/Action"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LightBackgroundColor" eSuperTypes="#/0/NamedElement"/>
+  </ecore:EPackage>
+  <ecore:EPackage name="essentialIFML" nsURI="platform:/resource/EssentialIFML/model/essentialIFML.ecore"
+      nsPrefix="essentialIFML">
+    <eClassifiers xsi:type="ecore:EClass" name="EssentialIFMLModel" eSuperTypes="#/1/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="viewcontainer" lowerBound="1"
+          upperBound="-1" eType="#/1/ViewContainer" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+          upperBound="-1" eType="#/1/Action" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="increasebuttonsize" upperBound="-1"
+          eType="#/1/IncreaseButtonSize" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="decreasebuttonsize" upperBound="-1"
+          eType="#/1/DecreaseButtonSize" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ViewContainer" eSuperTypes="#/1/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLandmark" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="viewcomponent" upperBound="-1"
+          eType="#/1/ViewComponent" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="annotation" lowerBound="1"
+          eType="#/1/Annotation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#/1/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+          upperBound="-1" eType="#/1/Action"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Field" eSuperTypes="#/1/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#/1/Datatype"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DetailsText" eSuperTypes="#/1/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#/1/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="navigates" eType="#/1/ViewContainer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#/1/ViewComponent">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1"
+          upperBound="-1" eType="#/1/Field" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="event" lowerBound="1"
+          upperBound="-1" eType="#/1/Event" containment="true" resolveProxies="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Details" eSuperTypes="#/1/ViewComponent">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ViewComponent" abstract="true" eSuperTypes="#/1/NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Annotation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="annotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Datatype">
+      <eLiterals name="String"/>
+      <eLiterals name="Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IncreaseButtonSize">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
+          eType="#/1/Action"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DecreaseButtonSize">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
+          eType="#/1/Action"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="essentialIFML" nsURI="platform:/resource/EssentialIFML/model/essentialIFML.ecore"
+      nsPrefix="essentialIFML">
+    <eClassifiers xsi:type="ecore:EClass" name="EssentialIFMLModel" eSuperTypes="#/2/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="viewcontainer" lowerBound="1"
+          upperBound="-1" eType="#/2/ViewContainer" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+          upperBound="-1" eType="#/2/Action" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="increasebuttonsize" upperBound="-1"
+          eType="#/2/IncreaseButtonSize" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="decreasebuttonsize" upperBound="-1"
+          eType="#/2/DecreaseButtonSize" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ViewContainer" eSuperTypes="#/2/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLandmark" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="viewcomponent" upperBound="-1"
+          eType="#/2/ViewComponent" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="annotation" lowerBound="1"
+          eType="#/2/Annotation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#/2/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+          upperBound="-1" eType="#/2/Action"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Field" eSuperTypes="#/2/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#/2/Datatype"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DetailsText" eSuperTypes="#/2/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#/2/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="navigates" eType="#/2/ViewContainer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#/2/ViewComponent">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1"
+          upperBound="-1" eType="#/2/Field" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="event" lowerBound="1"
+          upperBound="-1" eType="#/2/Event" containment="true" resolveProxies="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Details" eSuperTypes="#/2/ViewComponent">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ViewComponent" abstract="true" eSuperTypes="#/2/NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Annotation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="annotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Datatype">
+      <eLiterals name="String"/>
+      <eLiterals name="Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IncreaseButtonSize">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#/2/Action"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DecreaseButtonSize">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#/2/Action"/>
+    </eClassifiers>
+  </ecore:EPackage>
+</xmi:XMI>

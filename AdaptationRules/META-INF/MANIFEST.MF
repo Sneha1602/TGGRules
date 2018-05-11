@@ -1,7 +1,8 @@
 Manifest-Version: 1.0
 Bundle-SymbolicName: AdaptationRules;singleton:=true
-Bundle-Name: AdaptationRules
+Bundle-Name: %pluginName
 Bundle-Version: 1.0
+Bundle-ClassPath: .
 Require-Bundle: org.gervarro.democles.common,
  org.gervarro.democles.specification.emf,
  org.gervarro.democles.interpreter,
@@ -21,10 +22,15 @@ Require-Bundle: org.gervarro.democles.common,
  org.eclipse.emf.ecore.xmi,
  org.emoflon.ibex.tgg.core.language,
  org.emoflon.ibex.tgg.core.runtime,
- org.emoflon.ibex.tgg.runtime.democles
+ org.emoflon.ibex.tgg.runtime.democles,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ ContextML;visibility:=reexport,
+ EssentialIFML;visibility:=reexport
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-Vendor: eMoflon IBeX
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
 Import-Package: contextML.impl,
  essentialIFML.impl
