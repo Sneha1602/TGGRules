@@ -8,7 +8,7 @@
 		-entity -> e
 	}
 	e:User {
-		  ++ -colorBlindness -> colorBlind
+		  ++ -colorBlind -> colorBlind
 	}
 
 	++ colorBlind: ColorBlind

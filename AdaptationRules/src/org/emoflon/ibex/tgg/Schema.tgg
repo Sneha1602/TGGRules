@@ -43,6 +43,11 @@
 		#trg->ZoomScreen
 	}
 	
+	Age2IncreaseButtonSize{
+		#src->Age
+		#trg->Event
+	}
+	
 }
 
 #attributeConditions {

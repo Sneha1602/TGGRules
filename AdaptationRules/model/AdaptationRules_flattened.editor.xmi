@@ -29,45 +29,47 @@
       <source href="platform:/resource/ContextML/model/contextML.ecore#//Age"/>
       <target href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ZoomScreen"/>
     </correspondenceTypes>
+    <correspondenceTypes name="Age2IncreaseButtonSize">
+      <source href="platform:/resource/ContextML/model/contextML.ecore#//Age"/>
+      <target href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Event"/>
+    </correspondenceTypes>
+    <attributeCondDefs name="eq_string">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
   </schema>
-  <rules name="AdaptationButtonSize" schema="//@schema">
-    <sourcePatterns name="context">
-      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
-      <linkVariablePatterns target="//@rules.0/@sourcePatterns.1">
-        <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="e">
-      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.0/@sourcePatterns.2">
-        <op value="++"/>
-        <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="roleName">
-      <op value="++"/>
-      <type href="platform:/resource/ContextML/model/contextML.ecore#//Admin"/>
-    </sourcePatterns>
-    <targetPatterns name="ifml">
-      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
-      <linkVariablePatterns target="//@rules.0/@targetPatterns.1">
-        <op value="++"/>
-        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/increasebuttonsize"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="increaseButtonSize">
-      <op value="++"/>
-      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/IncreaseButtonSize"/>
-      <linkVariablePatterns target="//@rules.0/@targetPatterns.2">
-        <op value="++"/>
-        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/IncreaseButtonSize/action"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="showDetails">
-      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action"/>
-    </targetPatterns>
-    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.0" target="//@rules.0/@targetPatterns.0"/>
-  </rules>
   <rules name="AdaptationColorBlindness" schema="//@schema">
     <sourcePatterns name="colorBlind">
       <op value="++"/>
@@ -75,15 +77,15 @@
     </sourcePatterns>
     <sourcePatterns name="context">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
-      <linkVariablePatterns target="//@rules.1/@sourcePatterns.2">
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.2">
         <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
       </linkVariablePatterns>
     </sourcePatterns>
     <sourcePatterns name="e">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.1/@sourcePatterns.0">
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.0">
         <op value="++"/>
-        <type href="platform:/resource/ContextML/model/contextML.ecore#//User/colorBlindness"/>
+        <type href="platform:/resource/ContextML/model/contextML.ecore#//User/colorBlind"/>
       </linkVariablePatterns>
     </sourcePatterns>
     <targetPatterns name="allWindows">
@@ -91,26 +93,26 @@
     </targetPatterns>
     <targetPatterns name="ifml">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
-      <linkVariablePatterns target="//@rules.1/@targetPatterns.0">
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.0">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/changeBackgroundColor"/>
       </linkVariablePatterns>
     </targetPatterns>
-    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.1/@sourcePatterns.1" target="//@rules.1/@targetPatterns.1"/>
-    <correspondencePatterns name="userColorBlind2AdaptColorBlind" type="//@schema/@correspondenceTypes.4" source="//@rules.1/@sourcePatterns.0" target="//@rules.1/@targetPatterns.0">
+    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.1" target="//@rules.0/@targetPatterns.1"/>
+    <correspondencePatterns name="userColorBlind2AdaptColorBlind" type="//@schema/@correspondenceTypes.4" source="//@rules.0/@sourcePatterns.0" target="//@rules.0/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
   </rules>
   <rules name="AdaptationCreateAdminNavBar" schema="//@schema">
     <sourcePatterns name="context">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
-      <linkVariablePatterns target="//@rules.2/@sourcePatterns.1">
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.1">
         <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
       </linkVariablePatterns>
     </sourcePatterns>
     <sourcePatterns name="e">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.2/@sourcePatterns.2">
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.2">
         <op value="++"/>
         <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
       </linkVariablePatterns>
@@ -127,36 +129,36 @@
     </targetPatterns>
     <targetPatterns name="allWindows">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer"/>
-      <linkVariablePatterns target="//@rules.2/@targetPatterns.0">
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.0">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer/navBarContainer"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.2/@targetPatterns.1">
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.1">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer/navBarContainer"/>
       </linkVariablePatterns>
     </targetPatterns>
     <targetPatterns name="ifml">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
-      <linkVariablePatterns target="//@rules.2/@targetPatterns.2">
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.2">
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
     </targetPatterns>
-    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.2/@sourcePatterns.0" target="//@rules.2/@targetPatterns.3"/>
-    <correspondencePatterns name="roleToWindow" type="//@schema/@correspondenceTypes.2" source="//@rules.2/@sourcePatterns.2" target="//@rules.2/@targetPatterns.2">
+    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.1/@sourcePatterns.0" target="//@rules.1/@targetPatterns.3"/>
+    <correspondencePatterns name="roleToWindow" type="//@schema/@correspondenceTypes.2" source="//@rules.1/@sourcePatterns.2" target="//@rules.1/@targetPatterns.2">
       <op value="++"/>
     </correspondencePatterns>
   </rules>
   <rules name="AdaptationCreateStudentNavBar" schema="//@schema">
     <sourcePatterns name="context">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
-      <linkVariablePatterns target="//@rules.3/@sourcePatterns.1">
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.1">
         <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
       </linkVariablePatterns>
     </sourcePatterns>
     <sourcePatterns name="e">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.3/@sourcePatterns.2">
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.2">
         <op value="++"/>
         <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
       </linkVariablePatterns>
@@ -170,54 +172,72 @@
     </targetPatterns>
     <targetPatterns name="allWindows">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer"/>
-      <linkVariablePatterns target="//@rules.3/@targetPatterns.0">
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.0">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer/navBarContainer"/>
       </linkVariablePatterns>
     </targetPatterns>
     <targetPatterns name="ifml">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
-      <linkVariablePatterns target="//@rules.3/@targetPatterns.1">
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.1">
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
     </targetPatterns>
-    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.3/@sourcePatterns.0" target="//@rules.3/@targetPatterns.2"/>
-    <correspondencePatterns name="roleToWindow" type="//@schema/@correspondenceTypes.2" source="//@rules.3/@sourcePatterns.2" target="//@rules.3/@targetPatterns.1">
+    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.2/@sourcePatterns.0" target="//@rules.2/@targetPatterns.2"/>
+    <correspondencePatterns name="roleToWindow" type="//@schema/@correspondenceTypes.2" source="//@rules.2/@sourcePatterns.2" target="//@rules.2/@targetPatterns.1">
       <op value="++"/>
     </correspondencePatterns>
   </rules>
-  <rules name="AdaptationScreenZoom" schema="//@schema">
+  <rules name="AdaptationUserAge" schema="//@schema">
     <sourcePatterns name="ageOfUser">
       <op value="++"/>
       <type href="platform:/resource/ContextML/model/contextML.ecore#//Age"/>
     </sourcePatterns>
     <sourcePatterns name="context">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
-      <linkVariablePatterns target="//@rules.4/@sourcePatterns.2">
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.2">
         <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
       </linkVariablePatterns>
     </sourcePatterns>
     <sourcePatterns name="e">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.4/@sourcePatterns.0">
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.0">
         <op value="++"/>
         <type href="platform:/resource/ContextML/model/contextML.ecore#//User/age"/>
       </linkVariablePatterns>
     </sourcePatterns>
+    <targetPatterns name="ShowDetails">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Event"/>
+    </targetPatterns>
     <targetPatterns name="allWindows">
+      <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ZoomScreen"/>
     </targetPatterns>
     <targetPatterns name="essentialIFML">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
-      <linkVariablePatterns target="//@rules.4/@targetPatterns.0">
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.1">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/screenZoom"/>
       </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/increasebuttonsize"/>
+      </linkVariablePatterns>
     </targetPatterns>
-    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.4/@sourcePatterns.1" target="//@rules.4/@targetPatterns.1"/>
-    <correspondencePatterns name="userAge2ScreenZoom" type="//@schema/@correspondenceTypes.5" source="//@rules.4/@sourcePatterns.0" target="//@rules.4/@targetPatterns.0">
+    <correspondencePatterns name="age2IncreaseButton" type="//@schema/@correspondenceTypes.6" source="//@rules.3/@sourcePatterns.0" target="//@rules.3/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
+    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.3/@sourcePatterns.1" target="//@rules.3/@targetPatterns.2"/>
+    <correspondencePatterns name="userAge2ScreenZoom" type="//@schema/@correspondenceTypes.5" source="//@rules.3/@sourcePatterns.0" target="//@rules.3/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@targetPatterns.0">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/NamedElement/id"/>
+      </values>
+      <values xsi:type="tgg:LiteralExpression" value="'ShowDetails'"/>
+    </attrConditions>
   </rules>
   <rules name="Context2EssentialIFML" schema="//@schema">
     <sourcePatterns name="context">
@@ -228,14 +248,14 @@
       <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
     </targetPatterns>
-    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.5/@sourcePatterns.0" target="//@rules.5/@targetPatterns.0">
+    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.4/@sourcePatterns.0" target="//@rules.4/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
   </rules>
   <rules name="CreateAdminGUIStructure" schema="//@schema">
     <sourcePatterns name="e">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.6/@sourcePatterns.1">
+      <linkVariablePatterns target="//@rules.5/@sourcePatterns.1">
         <op value="++"/>
         <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
       </linkVariablePatterns>
@@ -249,20 +269,20 @@
     </targetPatterns>
     <targetPatterns name="loginAction">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action"/>
-      <linkVariablePatterns target="//@rules.6/@targetPatterns.0">
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.0">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action/navigates"/>
       </linkVariablePatterns>
     </targetPatterns>
-    <correspondencePatterns name="roleToViewContainer" type="//@schema/@correspondenceTypes.2" source="//@rules.6/@sourcePatterns.1" target="//@rules.6/@targetPatterns.0">
+    <correspondencePatterns name="roleToViewContainer" type="//@schema/@correspondenceTypes.2" source="//@rules.5/@sourcePatterns.1" target="//@rules.5/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
-    <correspondencePatterns name="userToLoginAction" type="//@schema/@correspondenceTypes.3" source="//@rules.6/@sourcePatterns.0" target="//@rules.6/@targetPatterns.1"/>
+    <correspondencePatterns name="userToLoginAction" type="//@schema/@correspondenceTypes.3" source="//@rules.5/@sourcePatterns.0" target="//@rules.5/@targetPatterns.1"/>
   </rules>
   <rules name="CreateGUIStructureAbstract" abstractRule="true" schema="//@schema">
     <sourcePatterns name="e">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.7/@sourcePatterns.1">
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.1">
         <op value="++"/>
         <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
       </linkVariablePatterns>
@@ -274,12 +294,12 @@
     <targetPatterns name="loginAction">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action"/>
     </targetPatterns>
-    <correspondencePatterns name="userToLoginAction" type="//@schema/@correspondenceTypes.3" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.0"/>
+    <correspondencePatterns name="userToLoginAction" type="//@schema/@correspondenceTypes.3" source="//@rules.6/@sourcePatterns.0" target="//@rules.6/@targetPatterns.0"/>
   </rules>
   <rules name="CreateUserGUIStructure" schema="//@schema">
     <sourcePatterns name="e">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.8/@sourcePatterns.1">
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.1">
         <op value="++"/>
         <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
       </linkVariablePatterns>
@@ -290,7 +310,7 @@
     </sourcePatterns>
     <targetPatterns name="loginAction">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action"/>
-      <linkVariablePatterns target="//@rules.8/@targetPatterns.1">
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.1">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action/navigates"/>
       </linkVariablePatterns>
@@ -298,21 +318,21 @@
     <targetPatterns name="studentWindow">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer"/>
     </targetPatterns>
-    <correspondencePatterns name="roleToViewContainer" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.1" target="//@rules.8/@targetPatterns.1">
+    <correspondencePatterns name="roleToViewContainer" type="//@schema/@correspondenceTypes.2" source="//@rules.7/@sourcePatterns.1" target="//@rules.7/@targetPatterns.1">
       <op value="++"/>
     </correspondencePatterns>
-    <correspondencePatterns name="userToLoginAction" type="//@schema/@correspondenceTypes.3" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.0"/>
+    <correspondencePatterns name="userToLoginAction" type="//@schema/@correspondenceTypes.3" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.0"/>
   </rules>
   <rules name="CreateWindowAbstract" abstractRule="true" schema="//@schema">
     <sourcePatterns name="context">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
-      <linkVariablePatterns target="//@rules.9/@sourcePatterns.1">
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.1">
         <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
       </linkVariablePatterns>
     </sourcePatterns>
     <sourcePatterns name="e">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
-      <linkVariablePatterns target="//@rules.9/@sourcePatterns.2">
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.2">
         <op value="++"/>
         <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
       </linkVariablePatterns>
@@ -323,20 +343,20 @@
     </sourcePatterns>
     <targetPatterns name="ifml">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
-      <linkVariablePatterns target="//@rules.9/@targetPatterns.1">
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.1">
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
     </targetPatterns>
     <targetPatterns name="loginWindow">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer"/>
     </targetPatterns>
-    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.0"/>
-    <correspondencePatterns name="userToLogin" type="//@schema/@correspondenceTypes.1" source="//@rules.9/@sourcePatterns.1" target="//@rules.9/@targetPatterns.1"/>
+    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.0"/>
+    <correspondencePatterns name="userToLogin" type="//@schema/@correspondenceTypes.1" source="//@rules.8/@sourcePatterns.1" target="//@rules.8/@targetPatterns.1"/>
   </rules>
   <rules name="CreateWindowsAndLinks" schema="//@schema">
     <sourcePatterns name="context">
       <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
-      <linkVariablePatterns target="//@rules.10/@sourcePatterns.1">
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.1">
         <op value="++"/>
         <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
       </linkVariablePatterns>
@@ -352,11 +372,11 @@
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;adminWindow&quot;"/>
       </attributeAssignments>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.2">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.2">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer/viewcomponent"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.15">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.15">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer/viewcomponent"/>
       </linkVariablePatterns>
@@ -399,27 +419,27 @@
     </targetPatterns>
     <targetPatterns name="ifml">
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel"/>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.8">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.8">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.0">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.0">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.14">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.14">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.17">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.17">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.9">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.9">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.10">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.10">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/EssentialIFMLModel/viewcontainer"/>
       </linkVariablePatterns>
@@ -435,7 +455,7 @@
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;login&quot;"/>
       </attributeAssignments>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.5">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.5">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Event/action"/>
       </linkVariablePatterns>
@@ -443,15 +463,15 @@
     <targetPatterns name="loginForm">
       <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Form"/>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.16">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.16">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Form/field"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.12">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.12">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Form/field"/>
       </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.6">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.6">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Form/event"/>
       </linkVariablePatterns>
@@ -463,7 +483,7 @@
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;loginWindow&quot;"/>
       </attributeAssignments>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.7">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.7">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer/viewcomponent"/>
       </linkVariablePatterns>
@@ -483,7 +503,7 @@
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;details&quot;"/>
       </attributeAssignments>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.13">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.13">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Event/action"/>
       </linkVariablePatterns>
@@ -495,7 +515,7 @@
     <targetPatterns name="showDetails">
       <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action"/>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.17">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.17">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Action/navigates"/>
       </linkVariablePatterns>
@@ -507,7 +527,7 @@
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;studentWindow&quot;"/>
       </attributeAssignments>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.3">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.3">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer/viewcomponent"/>
       </linkVariablePatterns>
@@ -515,7 +535,7 @@
     <targetPatterns name="userForm">
       <op value="++"/>
       <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Form"/>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.11">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.11">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Form/event"/>
       </linkVariablePatterns>
@@ -531,16 +551,16 @@
         <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/NamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;detailsWindow&quot;"/>
       </attributeAssignments>
-      <linkVariablePatterns target="//@rules.10/@targetPatterns.1">
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.1">
         <op value="++"/>
         <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ViewContainer/viewcomponent"/>
       </linkVariablePatterns>
     </targetPatterns>
-    <correspondencePatterns name="contextToEssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.10/@sourcePatterns.0" target="//@rules.10/@targetPatterns.4"/>
-    <correspondencePatterns name="userToLoginAction" type="//@schema/@correspondenceTypes.3" source="//@rules.10/@sourcePatterns.1" target="//@rules.10/@targetPatterns.5">
+    <correspondencePatterns name="contextToEssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.4"/>
+    <correspondencePatterns name="userToLoginAction" type="//@schema/@correspondenceTypes.3" source="//@rules.9/@sourcePatterns.1" target="//@rules.9/@targetPatterns.5">
       <op value="++"/>
     </correspondencePatterns>
-    <correspondencePatterns name="userToLoginWindow" type="//@schema/@correspondenceTypes.1" source="//@rules.10/@sourcePatterns.1" target="//@rules.10/@targetPatterns.8">
+    <correspondencePatterns name="userToLoginWindow" type="//@schema/@correspondenceTypes.1" source="//@rules.9/@sourcePatterns.1" target="//@rules.9/@targetPatterns.8">
       <op value="++"/>
     </correspondencePatterns>
   </rules>

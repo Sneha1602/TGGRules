@@ -1,4 +1,4 @@
-package org.emoflon.ibex.tgg.run.test;
+package org.emoflon.ibex.tgg.run.adaptationrules;
 
 import java.io.IOException;
 

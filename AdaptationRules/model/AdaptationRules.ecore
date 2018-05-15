@@ -26,4 +26,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//Age"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/ZoomScreen"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Age2IncreaseButtonSize">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/ContextML/model/contextML.ecore#//Age"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/EssentialIFML/model/essentialIFML.ecore#/0/Event"/>
+  </eClassifiers>
 </ecore:EPackage>
